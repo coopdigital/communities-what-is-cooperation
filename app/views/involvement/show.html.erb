@@ -1,6 +1,9 @@
 <h1>Involvement</h1>
 
 <%= form_for @form, as: :submission, url: submission_involvement_path(@submission), method: :put do |f| %>
+
+  <%= render 'shared/errors', object: @form, message: 'Please answer all the questions' %>
+
   <%= f.label :involvement, 'Why do you want to get involved?' %>
   <%= f.text_area :involvement %>
   <%= f.submit 'Next', class: 'btn btn-primary' %>

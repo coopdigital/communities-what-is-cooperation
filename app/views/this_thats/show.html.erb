@@ -1,6 +1,9 @@
 <h1>This or that?</h1>
 
 <%= form_for @form, as: :submission, url: submission_this_that_path(@submission), method: :put do |f| %>
+
+  <%= render 'shared/errors', object: @form, message: 'Please select an answer for each choice' %>
+
   <fieldset class="polar-choice">
     <div class="choice">
       <div>

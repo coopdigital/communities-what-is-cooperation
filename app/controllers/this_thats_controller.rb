@@ -7,7 +7,7 @@ class ThisThatsController < ApplicationController
   end
 
   def update
-    @form = ThisThatsForm.new(params.require(:submission).to_unsafe_h)
+    @form = ThisThatsForm.new(params.fetch(:submission, {}).to_unsafe_h)
     if @form.valid?
       @submission.update!(@form.attributes)
       redirect_to submission_feelings_path(@submission)

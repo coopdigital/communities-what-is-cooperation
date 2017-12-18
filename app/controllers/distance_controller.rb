@@ -3,7 +3,7 @@ class DistanceController < ApplicationController
   before_action :find_submission, :redirect_if_finished
 
   def show
-    @form = DistanceForm.new
+    @form = DistanceForm.new(distance: 20)
   end
 
   def update
