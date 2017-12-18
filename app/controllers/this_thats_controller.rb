@@ -1,6 +1,6 @@
 class ThisThatsController < ApplicationController
 
-  before_action :find_submission, :redirect_if_finished
+  before_action :find_submission, :redirect_if_finished, :load_questions
 
   def show
     @form = ThisThatsForm.new
@@ -20,5 +20,9 @@ class ThisThatsController < ApplicationController
 
   def find_submission
     @submission = Submission.find_by!(uuid: params[:submission_id])
+  end
+
+  def load_questions
+    @questions = Rails.application.config.spotlight.questions[:this_thats]
   end
 end

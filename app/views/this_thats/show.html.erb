@@ -4,24 +4,27 @@
 
   <%= render 'shared/errors', object: @form, message: 'Please select an answer for each choice' %>
 
-  <fieldset class="polar-choice">
-    <div class="choice">
-      <div>
-        <%= f.radio_button :this_1, 't' %>
-        <%= f.label :this_1_t do %>
-          Graffiti
-          <%= image_tag 'graffiti.png', alt: "Graffiti" %>
-        <% end %>
+  <% @questions.each do |question| %>
+
+    <fieldset class="polar-choice">
+      <div class="choice">
+        <div>
+          <%= f.radio_button question[:name], 't' %>
+          <%= f.label :"#{question[:name]}_t" do %>
+            <%= question[:left][:name] %>
+            <%= image_tag question[:left][:image], alt: question[:left][:name] %>
+          <% end %>
+        </div>
+        <div>
+          <%= f.radio_button question[:name], 'f' %>
+          <%= f.label :"#{question[:name]}_f" do %>
+            <%= question[:right][:name] %>
+            <%= image_tag question[:right][:image], alt: question[:right][:name] %>
+          <% end %>
+        </div>
       </div>
-      <div>
-        <%= f.radio_button :this_1, 'f' %>
-        <%= f.label :this_1_f do %>
-          Nature
-          <%= image_tag 'nature.png', alt: "Nature" %>
-        <% end %>
-      </div>
-    </div>
-  </fieldset>
+    </fieldset>
+  <% end %> 
 
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
