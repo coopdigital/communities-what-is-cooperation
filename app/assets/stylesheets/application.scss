@@ -20,9 +20,11 @@ fieldset {
     position: relative;
     div.choice {
       width: 100%;
+      border-radius: 0.2rem;
+      overflow: hidden;
       &:after {
         content: 'OR';
-        font-family:"AvenirNextLTW01-Medium";
+        font-family: 'AvenirNextLTW01-Demi';
         font-size: 1.2rem;
         text-align: center;
         line-height: 3.8rem;
@@ -49,7 +51,8 @@ fieldset {
         display: none;
         &:checked {
           ~ label {
-
+            outline: solid $success-green 1rem;
+            outline-offset: -1rem;
           }
         }
       }
