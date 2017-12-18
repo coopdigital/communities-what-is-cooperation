@@ -1,4 +1,4 @@
-<h1>Distance</h1>
+<h1>How far are you willing to go?</h1>
 
 <%= form_for @form, as: :submission, url: submission_distance_path(@submission), method: :put do |f| %>
 
@@ -6,8 +6,8 @@
 
   Find things to do
   <%= f.number_field :distance, min: 1 %>
-  minutes 
+  minutes
   <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
-  from where you live (<%=@submission.member.postcode%>).
+  from home (<%=@submission.member.postcode%>).
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
