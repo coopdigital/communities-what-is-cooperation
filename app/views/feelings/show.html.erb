@@ -1,6 +1,9 @@
 <h1>Feelings</h1>
 
 <%= form_for @form, as: :submission, url: submission_feelings_path(@submission), method: :put do |f| %>
+
+  <%= render 'shared/errors', object: @form, message: 'Please answer all the questions' %>
+
   <p>How do you feel about this thing?</p>
   <%= f.label :feelings_1_happy, 'Happy' %>
   <%= f.radio_button :feelings_1, 'happy' %>
