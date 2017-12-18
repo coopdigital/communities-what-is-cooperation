@@ -1,0 +1,22 @@
+<h1>Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Postcode</th>
+      <th>Links</th>
+      <th>Submissions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.uuid %></td>
+        <td><%= member.postcode %></td>
+        <td><%= link_to 'Landing page', member_path(member) %></td>
+        <td><%= member.submissions.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

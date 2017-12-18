@@ -9,6 +9,11 @@ Rails.application.routes.draw do
     resource :feelings, only: [:show, :update]
   end
 
+  namespace :admin do
+    root to: redirect('admin/members')
+    resources :members, only: [:index, :create]
+  end
+
   resources :pages, only: :show
   root to: 'pages#index'
 end
