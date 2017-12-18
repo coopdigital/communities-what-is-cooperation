@@ -2,8 +2,18 @@
 
 <fieldset class="polar-choice">
   <h2>Choose</h2>
-  <label for="option-1"></label>
-  <input type="radio" name="option-1">
-  <label for="option-2"></label>
-  <input type="radio" name="option-2">
+  <div class="choice">
+    <div>
+      <input type="radio" name="polar" id="graffiti">
+      <label for="graffiti">Graffiti
+        <img src="<%= image_path 'graffiti.png' %>" alt="Graffiti">
+      </label>
+    </div>
+    <div>
+      <input type="radio" name="polar" id="nature">
+      <label for="nature">Nature
+        <img src="<%= image_path 'nature.png' %>" alt="Nature">
+      </label>
+    </div>
+  </div>
 </fieldset>
