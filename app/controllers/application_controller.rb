@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def redirect_if_finished
     if @submission.finished?
-      redirect_to submissions_path(@submission)
+      redirect_to submission_path(@submission)
     end
   end
 end
