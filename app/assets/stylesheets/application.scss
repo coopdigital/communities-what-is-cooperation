@@ -102,7 +102,7 @@ fieldset {
         display: none;
         &:checked {
           ~ label {
-            outline: solid $success-green 1rem;
+            outline: 1rem solid $coop-brand-blue;
             outline-offset: -1rem;
           }
         }
