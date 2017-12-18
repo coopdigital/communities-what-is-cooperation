@@ -15,8 +15,9 @@
 
 @import 'coop-toolkit/coop-toolkit';
 
-input {
+input[type="submit"] {
   width: auto;
+  margin: 1rem 0;
 }
 
 fieldset {
