@@ -20,21 +20,5 @@
     </div>
   </section>
 
-  <section class="feelings-about-things">
-    <h2>Join headingley Library. It's free, and all you need is your ID.</h2>
-    <div>
-      <%= f.radio_button :feelings_1, 'happy' %>
-      <%= f.label :feelings_1_happy, '😀' %>
-    </div>
-    <div>
-      <%= f.radio_button :feelings_1, 'indifferent' %>
-      <%= f.label :feelings_1_indifferent, '😐' %>
-    </div>
-    <div>
-      <%= f.radio_button :feelings_1, 'sad' %>
-      <%= f.label :feelings_1_sad, '☹️' %>
-    </div>
-  </section>
-
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
