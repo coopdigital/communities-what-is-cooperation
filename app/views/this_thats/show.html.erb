@@ -1,10 +1,24 @@
 <h1>This or that?</h1>
 
 <%= form_for @form, as: :submission, url: submission_this_that_path(@submission), method: :put do |f| %>
-  <%= f.label :this_1_t, 'This?' %>
-  <%= f.radio_button :this_1, 't' %>
-  <%= f.label :this_1_f, 'or that?' %>
-  <%= f.radio_button :this_1, 'f' %>
+  <fieldset class="polar-choice">
+    <div class="choice">
+      <div>
+        <%= f.radio_button :this_1, 't' %>
+        <%= f.label :this_1_t do %>
+          Graffiti
+          <%= image_tag 'graffiti.png', alt: "Graffiti" %>
+        <% end %>
+      </div>
+      <div>
+        <%= f.radio_button :this_1, 'f' %>
+        <%= f.label :this_1_f do %>
+          Nature
+          <%= image_tag 'nature.png', alt: "Nature" %>
+        <% end %>
+      </div>
+    </div>
+  </fieldset>
 
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
