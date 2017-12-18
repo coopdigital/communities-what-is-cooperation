@@ -15,6 +15,10 @@
 
 @import 'coop-toolkit/coop-toolkit';
 
+input {
+  width: auto;
+}
+
 fieldset {
   &.polar-choice {
     position: relative;
