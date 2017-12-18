@@ -1,0 +1,9 @@
+<h1>Distance</h1>
+
+<%= form_for @form, as: :submission, url: submission_distance_path(@submission), method: :put do |f| %>
+  <%= f.label :distance, 'How far would you go?' %>
+  <%= f.number_field :distance %>
+  <%= f.label :distance_mode, 'How would you travel?' %>
+  <%= f.text_field :distance_mode %>
+  <%= f.submit 'Next', class: 'btn btn-primary' %>
+<% end %>

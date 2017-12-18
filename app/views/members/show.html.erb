@@ -1,0 +1,4 @@
+<h1>Introduction page </h1>
+<p><%= @member.postcode %> </p>
+
+<%= button_to 'Get started', submissions_path(member_id: @member.uuid), class: 'btn btn-primary'%>
