@@ -6,8 +6,8 @@
 
   Find things to do
   <%= f.number_field :distance, min: 1 %>
-  minutes 
+  minutes
   <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
-  from where you live (<%=@submission.member.postcode%>).
+  from home (<%=@submission.member.postcode%>).
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>

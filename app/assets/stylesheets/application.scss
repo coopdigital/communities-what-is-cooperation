@@ -15,9 +15,22 @@
 
 @import 'coop-toolkit/coop-toolkit';
 
-input[type="submit"] {
-  width: auto;
-  margin: 1rem 0;
+input, select {
+  &[type="submit"]  {
+    width: auto;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  &#submission_distance {
+    max-width: 2.8rem;
+  }
+
+  &#submission_distance,
+  &#submission_distance_mode {
+    display: inline;
+    width: auto;
+  }
 }
 
 fieldset {
