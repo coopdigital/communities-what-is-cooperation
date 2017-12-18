@@ -1,0 +1,41 @@
+<h1>Members</h1>
+
+<% if flash[:member_uuid] %>
+  <hr />
+  <p class="message message-success">Member created. Remember to copy the details below back into the spreadsheet.</p>
+  <ul>
+    <li><strong>ID:</strong> <%= flash[:member_uuid] %></li>
+    <li><strong>Link:</strong> <%= link_to member_url(flash[:member_uuid]), member_path(flash[:member_uuid]) %></li>
+  </ul>
+<% end %>
+
+<hr />
+<h2>Create a new member</h2>
+<p class="message message-info">Enter the member's postcode below and a unique ID and link will be created:</p>
+<%= form_tag admin_members_path, method: :post do %>
+  <%= label_tag :postcode %>
+  <%= text_field_tag :postcode, params[:postcode], required: true %>
+  <%= submit_tag 'Create member', class: 'btn btn-primary'%>
+<% end %>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Postcode</th>
+      <th>Links</th>
+      <th>Submissions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.uuid %></td>
+        <td><%= member.postcode %></td>
+        <td><%= link_to 'Landing page', member_path(member) %></td>
+        <td><%= member.submissions.count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
