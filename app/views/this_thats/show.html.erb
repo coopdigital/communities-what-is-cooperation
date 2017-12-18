@@ -1,0 +1,10 @@
+<h1>This or that?</h1>
+
+<%= form_for @form, as: :submission, url: submission_this_that_path(@submission), method: :put do |f| %>
+  <%= f.label :this_1_t, 'This?' %>
+  <%= f.radio_button :this_1, 't' %>
+  <%= f.label :this_1_f, 'or that?' %>
+  <%= f.radio_button :this_1, 'f' %>
+
+  <%= f.submit 'Next', class: 'btn btn-primary' %>
+<% end %>
