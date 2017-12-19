@@ -81,7 +81,12 @@ section {
 fieldset {
   &.polar-choice {
     position: relative;
+    > p {
+      font-size: 1.2rem;
+      font-family: 'AvenirNextLTW01-Demi';
+    }
     div.choice {
+      padding: 0 0 0.8rem 0;
       div {
         label {
           margin: 0;
