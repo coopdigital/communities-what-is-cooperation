@@ -4,7 +4,7 @@ Rails.application.config.spotlight.questions = {
     {
       name: :this_1,
       left: {
-        name: 'plant some trees'
+        name: 'meet new people and enjoy food together'
       },
       right: {
         name: 'learn to play a musical instrument'
