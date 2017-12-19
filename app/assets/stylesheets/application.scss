@@ -91,10 +91,13 @@ section {
 //   border: 0.2rem solid $white;
 // }
 
+.margin-bh {
+  margin-bottom: 0;
+}
+
 fieldset {
   &.polar-choice {
     position: relative;
-    margin-bottom: 2rem;
     div.choice {
       div {
 
@@ -108,7 +111,32 @@ fieldset {
           }
         }
         label {
+          margin: 0;
+          color: $white;
+          padding: 1.8rem;
+          box-sizing: border-box;
+          font-size: 1.6rem;
+          line-height: 1.2;
+          @media (min-height: 600px) {
+            font-size: 2.2rem;
+            line-height: 1.4;
+            min-height: 28vh;
+          }
 
+          @media (min-width: 900px) {
+            font-size: 2.8rem;
+            line-height: 1.6;
+          }
+        }
+        &:nth-of-type(1) {
+          label {
+            background: $base-biscay;
+          }
+        }
+        &:nth-of-type(2) {
+          label {
+            background: $base-oregon;
+          }
         }
       }
     }
