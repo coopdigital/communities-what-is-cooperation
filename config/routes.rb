@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: redirect('admin/members')
-    resources :members, only: [:index, :create]
+    resources :members, only: [:index, :create, :show]
   end
 
   resources :pages, only: :show

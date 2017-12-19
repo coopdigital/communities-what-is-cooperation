@@ -15,5 +15,10 @@ module Admin
       redirect_to admin_members_path, flash: {member_uuid: member.uuid}
     end
 
+    def show
+      @member = Member.find_by!(uuid: params[:id])
+      @this_thats = Rails.application.config.spotlight.questions[:this_thats]
+    end
+
   end
 end

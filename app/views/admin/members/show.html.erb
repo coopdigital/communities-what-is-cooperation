@@ -1,0 +1,37 @@
+<h1><%= @member.uuid %> (<%=@member.postcode%>)</h1>
+
+
+<% @member.submissions.by_created.each_with_index do |submission, index| %>
+  <h2>
+    Submission <%= index + 1%>: <%= submission.created_at %>
+  </h2>
+  <% unless submission.finished? %>
+    <p class="message message-error">UNFINISHED</p>
+  <% end %>
+  <table>
+    <tbody>
+      <tr>
+        <td>Involvement</td>
+        <td><%= submission.involvement %></td>
+      </tr>
+      <tr>
+        <td>Distance</td>
+        <td><%= submission.distance %> minutes <%= submission.distance_mode %> from <%= @member.postcode %></td>
+      </tr>
+      <% @this_thats.each do |this_that| %>
+        <tr>
+          <td><%=this_that[:left][:name]%> or <%=this_that[:right][:name]%>?</td>
+          <td>
+            <% if submission[this_that[:name]].nil? %>
+              UNANSWERED
+            <% else %>
+              <%= submission[this_that[:name]] ? this_that[:left][:name] : this_that[:right][:name] %>
+            <% end %>
+
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>
