@@ -4,12 +4,10 @@ Rails.application.config.spotlight.questions = {
     {
       name: :this_1,
       left: {
-        name: 'Graffiti',
-        image: 'graffiti.png'
+        name: 'meet new people and enjoy food together'
       },
       right: {
-        name: 'Nature',
-        image: 'nature.png'
+        name: 'learn to play a musical instrument'
       }
     }
   ]
