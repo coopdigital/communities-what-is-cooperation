@@ -83,16 +83,6 @@ fieldset {
     position: relative;
     div.choice {
       div {
-
-        input {
-          display: none;
-          &:checked {
-            ~ label {
-              outline: 0.2rem solid $coop-brand-blue;
-              outline-offset: -0.2rem;
-            }
-          }
-        }
         label {
           margin: 0;
           color: $white;
@@ -112,8 +102,18 @@ fieldset {
           }
         }
         &:nth-of-type(1) {
+          input {
+            display: none;
+            &:checked {
+              ~ label {
+                background: darken($base-biscay,10%);
+              }
+            }
+          }
           label {
             background: $base-biscay;
+            border-top-left-radius: 0.4rem;
+            border-top-right-radius: 0.4rem;
           }
           position: relative;
           &:after {
@@ -133,8 +133,18 @@ fieldset {
           }
         }
         &:nth-of-type(2) {
+          input {
+            display: none;
+            &:checked {
+              ~ label {
+                background: darken($base-oregon,10%);
+              }
+            }
+          }
           label {
             background: $base-oregon;
+            border-bottom-left-radius: 0.4rem;
+            border-bottom-right-radius: 0.4rem;
           }
         }
       }
