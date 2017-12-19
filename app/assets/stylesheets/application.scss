@@ -65,53 +65,42 @@ section {
   }
 }
 
+// &:after {
+//   content: 'OR';
+//   font-family: 'AvenirNextLTW01-Demi';
+//   font-size: 1.2rem;
+//   text-align: center;
+//   line-height: 3.8rem;
+//   position: absolute;
+//   width: 4rem;
+//   height: 4rem;
+//   color: $white;
+//   background: $coop-link-blue;
+//   top: calc(50% - 2rem);
+//   left: calc(50% - 2rem);
+//   border-radius: 100%;
+//   border: 0.2rem solid $white;
+// }
+
 fieldset {
   &.polar-choice {
     position: relative;
     margin-bottom: 2rem;
     div.choice {
-      width: 100%;
-      border-radius: 0.2rem;
-      overflow: hidden;
-      &:after {
-        content: 'OR';
-        font-family: 'AvenirNextLTW01-Demi';
-        font-size: 1.2rem;
-        text-align: center;
-        line-height: 3.8rem;
-        position: absolute;
-        width: 4rem;
-        height: 4rem;
-        color: $white;
-        background: $coop-link-blue;
-        top: calc(50% - 2rem);
-        left: calc(50% - 2rem);
-        border-radius: 100%;
-        border: 0.2rem solid $white;
-      }
-    }
-    white-space: nowrap;
-    font-size: 0;
-    h2  {
-      font-size: 1.2rem;
-    }
-    div {
-      display: inline-block;
-      width: 50%;
-      input {
-        display: none;
-        &:checked {
-          ~ label {
-            outline: 1rem solid $coop-brand-blue;
-            outline-offset: -1rem;
+      div {
+
+        input {
+          display: none;
+          &:checked {
+            ~ label {
+              outline: 0.2rem solid $coop-brand-blue;
+              outline-offset: -0.2rem;
+            }
           }
         }
-      }
-      label {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        font-size: 0;
+        label {
+
+        }
       }
     }
   }
