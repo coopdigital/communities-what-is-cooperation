@@ -58,6 +58,19 @@ fieldset {
           border-radius: 0.4rem;
         }
       }
+      &.thumbs-up-down-choice {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        label {
+          font-size: 2rem;
+          background: $offwhite;
+          border-radius: 0.2rem;
+          padding: 1rem 2rem;
+          text-align: center;
+          display: inline-block;
+        }
+      }
     }
   }
 }
