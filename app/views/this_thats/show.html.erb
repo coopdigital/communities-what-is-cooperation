@@ -2,15 +2,13 @@
   <%= render 'shared/errors', object: @form, message: 'Please select an answer for each choice' %>
 
   <% @questions.each do |question| %>
-    <fieldset class="polar-choice">
+    <fieldset class="thunbs-up-down">
       <p>I want to...</p>
       <div class="choice">
-        <div>
-          <%= f.radio_button question[:name], 't' %>
-          <%= f.label :"#{question[:name]}_t" do %>
-            <%= question[:left][:name] %>
-          <% end %>
-        </div>
+        <%= f.radio_button question[:name], 't' %>
+        <%= f.label :"#{question[:name]}_t" do %>
+          <%= question[:left][:name] %>
+        <% end %>
       </div>
     </fieldset>
   <% end %>
