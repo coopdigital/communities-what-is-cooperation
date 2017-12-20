@@ -86,6 +86,11 @@ fieldset {
           padding: 1rem 2rem;
           text-align: center;
           display: inline-block;
+          cursor: pointer;
+          border: 2px solid $offwhite;
+          &:hover {
+            border: 2px solid $coop-grey;
+          }
           &:first-of-type {
             margin-right: 1rem;
           }
