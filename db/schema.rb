@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20171220104153) do
     t.integer "submission_id", null: false
     t.integer "activity_id", null: false
     t.integer "position", null: false
+    t.string "response", null: false
   end
 
   create_table "members", force: :cascade do |t|

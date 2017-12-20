@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :submissions, only: [:create, :show] do
     resource :involvement, only: [:show, :update], controller: :involvement
     resource :distance, only: [:show, :update], controller: :distance
-    resource :this_that, only: [:show, :update], path: 'concerns'
+    resource :activities, only: [:show, :update]
   end
 
   namespace :admin do
