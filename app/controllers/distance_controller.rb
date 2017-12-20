@@ -10,7 +10,7 @@ class DistanceController < ApplicationController
     @form = DistanceForm.new(params.require(:submission).to_unsafe_h)
     if @form.valid?
       @submission.update!(@form.attributes)
-      redirect_to submission_this_that_path(@submission)
+      redirect_to submission_activities_path(@submission)
     else
       render :show
     end

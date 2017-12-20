@@ -18,19 +18,18 @@
         <td>Distance</td>
         <td><%= submission.distance %> minutes <%= submission.distance_mode %> from <%= @member.postcode %></td>
       </tr>
-      <% @this_thats.each do |this_that| %>
-        <tr>
-          <td><%=this_that[:left][:name]%> or <%=this_that[:right][:name]%>?</td>
-          <td>
-            <% if submission[this_that[:name]].nil? %>
-              UNANSWERED
-            <% else %>
-              <%= submission[this_that[:name]] ? this_that[:left][:name] : this_that[:right][:name] %>
+      <tr>
+        <td>Activities</td>
+        <td>
+          <ol>
+            <%- submission.interests.by_position.each do |interest| %>
+              <li>
+                <%= interest.response_emoji %>&nbsp;<%=interest.activity.name%>
+              </li>
             <% end %>
-
-          </td>
-        </tr>
-      <% end %>
+          </ol>
+        </td>
+      </tr>
     </tbody>
   </table>
 
