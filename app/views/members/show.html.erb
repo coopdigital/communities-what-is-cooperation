@@ -1,10 +1,49 @@
 <h1>Spotlight</h1>
 
+<h2>Make something good happen in your neighbourhood</h2>
+
 <p>
-  A lot of us would like to get more involved with our neighbourhoods, but it’s not always easy to know where to start.
+  Is there more to life than work, shopping and telly? At Co-op, we think there is.
 </p>
 
 <p>
-  Rediscover your area with Co-op Spotlight - get tailored suggestions about different things to try near you.
+  Neighbourhoods are better when people play, learn and work together.
 </p>
+
+<p>
+  Spotlight helps you discover local opportunities to do the things you love - and if there aren’t any, help you get something going with people in your neighbourhood.
+</p>
+
+<p>
+  Ready to make something good?
+</p>
+
 <%= button_to 'Get started', submissions_path(member_id: @member.uuid), class: 'btn btn-primary'%>
+
+<section class="play">
+  <p>
+    Imagine organising a fun run with your neighbours, or closing your road for street sports day.
+  </p>
+  <img src="<%= image_path '.svg' %>" alt="">
+</section>
+
+<section class="learn">
+  <p>
+    Could you help someone learn how to do a thing that comes easily to you? Or pick up a new skill - and make a new friend while you’re at it?
+  </p>
+  <img src="<%= image_path '.svg' %>" alt="">
+</section>
+
+<section class="work">
+  <p>
+    If your street came together to fix one thing in your area that’s bothering you, what would that be?
+  </p>
+  <img src="<%= image_path '.svg' %>" alt="">
+</section>
+
+<footer>
+  <h2>Why Co-op?</h2>
+  <p>
+    Co-op has always stood for self-help and solidarity. It’s our job to find new ways to support people, so that they can build a better world - for themselves.
+  </p>
+</footer>
