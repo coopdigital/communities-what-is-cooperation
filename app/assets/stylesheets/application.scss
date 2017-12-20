@@ -135,6 +135,9 @@ fieldset {
           &:hover {
             border: 2px solid $coop-grey;
           }
+          &:active {
+            background: $coop-grey;
+          }
           &:first-of-type {
             margin-right: 1rem;
           }
