@@ -9,8 +9,8 @@ class ThisThatsController < ApplicationController
   def update
     @form = ThisThatsForm.new(params.fetch(:submission, {}).to_unsafe_h)
     if @form.valid?
-      @submission.update!(@form.attributes)
-      redirect_to submission_feelings_path(@submission)
+      @submission.update!(@form.attributes.merge(finished: true))
+      redirect_to submission_path(@submission)
     else
       render :show
     end

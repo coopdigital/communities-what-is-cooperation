@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218103712) do
+ActiveRecord::Schema.define(version: 20171220102644) do
 
   create_table "members", force: :cascade do |t|
     t.string "uuid", null: false
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20171218103712) do
     t.integer "distance"
     t.string "distance_mode"
     t.boolean "this_1"
-    t.string "feelings_1"
     t.boolean "finished", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

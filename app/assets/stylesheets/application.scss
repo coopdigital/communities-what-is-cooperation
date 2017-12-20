@@ -46,34 +46,6 @@ label {
   font-size: 1.2rem;
 }
 
-section {
-  &.feelings-about-things {
-    margin-bottom: 2rem;
-    div {
-      display: inline-block;
-      input[type="radio"] {
-        display: none;
-        &:checked {
-          ~ label {
-            border: 2px solid $coop-brand-blue;
-            background: $white;
-          }
-        }
-      }
-      label {
-        border: 2px solid $offwhite;
-        width: 4rem;
-        height: 4rem;
-        line-height: 4rem;
-        border-radius: 0.2rem;
-        box-sizing: border-box;
-        text-align: center;
-        background: $offwhite;
-      }
-    }
-  }
-}
-
 .margin-bh {
   margin-bottom: 0;
 }
