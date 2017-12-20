@@ -17,7 +17,6 @@ module Admin
 
     def show
       @member = Member.find_by!(uuid: params[:id])
-      @this_thats = Rails.application.config.spotlight.questions[:this_thats]
     end
 
   end
