@@ -47,6 +47,10 @@ fieldset {
     input {
       display: none;
     }
+    > p {
+      font-family:"AvenirNextLTW01-Medium";
+      font-size: 1.2rem;
+    }
     div {
       &.statement {
         p {
