@@ -1,15 +1,14 @@
-<h1>[TODO: ACTIVITY SUGGESTION]</h1>
-
-<% if @ups >= @required_interests %>
-  <p>[TODO: COPY FOR WHERE THEY SELECTED ENOUGH]</p>
-<% elsif @ups > 0 %>
-  <p>[TODO: COPY FOR WHERE THEY SELECTED SOME BUT NOT ENOUGH]</p>
-<% else %>
-  <p>[TODO: COPY FOR WHERE THEY SELECTED NONE]</p>
-<% end %>
 
 <%= form_tag submission_activities_path(@submission) do |f| %>
-  <%= label_tag :suggestion, '[TODO: ENTER YOUR SUGGESTION BELOW]' %>
+
+  <% if @ups >= @required_interests %>
+    <h1>Add your own activity</h1>
+    <%= label_tag :suggestion, "Have we missed something? Is there an activity else you'd like to do in your neighbourhood? Let us know." %>
+  <% else %>
+    <h1>We're out of ideas!</h1>
+    <%= label_tag :suggestion, "That's all the activities we've listed - but it's not all the activities there are. Tell us what you'd like to do in your neighbourhood." %>
+  <% end %>
+
   <%= text_area_tag :suggestion %>
   <%= submit_tag 'Next', class: 'btn btn-primary' %>
 <% end %>
