@@ -76,6 +76,46 @@ fieldset {
             right: 1rem;
           }
         }
+        &.statement-color-1 {
+          p {
+            background: $base-cadillac;
+          }
+        }
+        &.statement-color-2 {
+          p {
+            background: $base-meteorite;
+          }
+        }
+        &.statement-color-3 {
+          p {
+            background: $base-biscay;
+          }
+        }
+        &.statement-color-4 {
+          p {
+            background: $base-kashmir;
+          }
+        }
+        &.statement-color-5 {
+          p {
+            background: $base-surfie;
+          }
+        }
+        &.statement-color-6 {
+          p {
+            background: $base-thumb;
+          }
+        }
+        &.statement-color-7 {
+          p {
+            background: $base-oregon;
+          }
+        }
+        &.statement-color-8 {
+          p {
+            background: $base-tan;
+          }
+        }
       }
       &.thumbs-up-down-choice {
         @media (max-width: 720px) {
