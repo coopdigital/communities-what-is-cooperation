@@ -8,6 +8,6 @@
   <%= f.number_field :distance, min: 1, pattern: "[0-9]" %>
   minutes
   <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
-  from home (<%=@submission.member.postcode%>).
+  from home.
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
