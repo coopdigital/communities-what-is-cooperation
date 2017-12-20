@@ -5,7 +5,7 @@
   <%= render 'shared/errors', object: @form, message: 'Please fill in all the details' %>
 
   Find things to do
-  <%= f.number_field :distance, min: 1 %>
+  <%= f.number_field :distance, min: 1, pattern: "[0-9]" %>
   minutes
   <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
   from home (<%=@submission.member.postcode%>).
