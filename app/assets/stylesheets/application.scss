@@ -60,12 +60,12 @@ fieldset {
           padding: 1rem 1.8rem 1.8rem 1.8rem;
           border-radius: 0.4rem;
 
-          font-size: 2.4rem;
+          font-size: 1.6rem;
           line-height: 1.4;
 
           @media (min-height: 600px) {
-            font-size: 2.4rem;
-            line-height: 1.6;
+            font-size: 3rem;
+            line-height: 1.4;
           }
 
           @media (max-width: 720px) {
@@ -121,7 +121,10 @@ fieldset {
         @media (max-width: 720px) {
           position: fixed;
           bottom: 2rem;
+          left: 1rem;
           right: 1rem;
+          display: inline-flex;
+          justify-content: space-between;
         }
         label {
           font-size: 2rem;
@@ -130,6 +133,7 @@ fieldset {
           padding: 1rem 2rem;
           text-align: center;
           display: inline-block;
+          width: calc(50% - 0.5rem);
           cursor: pointer;
           border: 2px solid $offwhite;
           &:hover {
@@ -137,9 +141,6 @@ fieldset {
           }
           &:active {
             background: $coop-grey;
-          }
-          &:first-of-type {
-            margin-right: 1rem;
           }
         }
       }
