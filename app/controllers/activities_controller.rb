@@ -19,7 +19,7 @@ class ActivitiesController < ApplicationController
   end
 
   def new
-    @required_activities = 5
+    @required_interests = 5
     @ups = @submission.interests.thumbs_up.count
     @downs = @submission.interests.thumbs_down.count
     @unseens = @submission.interests.unseen.count
