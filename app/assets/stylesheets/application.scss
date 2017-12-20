@@ -42,6 +42,12 @@ input, select {
   }
 }
 
+label[for='submission_involvement'] {
+  @media (max-width: 720px) {
+    font-size: 1.2rem;
+  }
+}
+
 p.begin-statement {
   font-family:"AvenirNextLTW01-Medium";
   font-size: 1.2rem;
