@@ -1,5 +1,5 @@
 <%= form_for @submission, url: submission_activities_path(@submission), method: :put do |f| %>
-  <p>I want to...</p>
+  <p class="begin-statement">I want to...</p>
   <%= f.fields_for :interests, @interests do |interest_fields| %>
     <fieldset class="thumbs-up-down">
       <%= interest_fields.hidden_field :position %>

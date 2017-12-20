@@ -42,14 +42,15 @@ input, select {
   }
 }
 
+p.begin-statement {
+  font-family:"AvenirNextLTW01-Medium";
+  font-size: 1.2rem;
+}
+
 fieldset {
   &.thumbs-up-down {
     input {
       display: none;
-    }
-    > p {
-      font-family:"AvenirNextLTW01-Medium";
-      font-size: 1.2rem;
     }
     div {
       &.statement {
