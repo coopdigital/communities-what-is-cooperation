@@ -13,7 +13,7 @@ class AddActivities < ActiveRecord::Migration[5.1]
       t.string :response, null: false
     end
 
-    add_foreign_key :activities, :interests
-    add_foreign_key :activities, :submissions
+    add_foreign_key :interests, :activities
+    add_foreign_key :interests, :submissions
   end
 end
