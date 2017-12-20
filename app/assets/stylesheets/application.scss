@@ -32,7 +32,7 @@ input, select {
   }
 
   &#submission_distance {
-    max-width: 2.8rem;
+    max-width: 4rem;
   }
 
   &#submission_distance,
@@ -42,14 +42,21 @@ input, select {
   }
 }
 
+label[for='submission_involvement'] {
+  @media (max-width: 720px) {
+    font-size: 1.2rem;
+  }
+}
+
+p.begin-statement {
+  font-family:"AvenirNextLTW01-Medium";
+  font-size: 1.2rem;
+}
+
 fieldset {
   &.thumbs-up-down {
     input {
       display: none;
-    }
-    > p {
-      font-family:"AvenirNextLTW01-Medium";
-      font-size: 1.2rem;
     }
     div {
       &.statement {
@@ -64,8 +71,8 @@ fieldset {
           line-height: 1.4;
 
           @media (min-height: 600px) {
-            font-size: 2.4rem;
-            line-height: 1.6;
+            font-size: 3rem;
+            line-height: 1.4;
           }
 
           @media (max-width: 720px) {
@@ -118,11 +125,16 @@ fieldset {
         }
       }
       &.thumbs-up-down-choice {
+        display: inline-block;
         @media (max-width: 720px) {
           position: fixed;
           bottom: 2rem;
+          left: 1rem;
           right: 1rem;
+          display: inline-flex;
+          justify-content: space-between;
         }
+
         label {
           font-size: 2rem;
           background: $offwhite;
@@ -132,22 +144,22 @@ fieldset {
           display: inline-block;
           cursor: pointer;
           border: 2px solid $offwhite;
+          @media (max-width: 720px) {
+            width: calc(50% - 0.5rem);
+          }
           &:hover {
             border: 2px solid $coop-grey;
           }
+          &:active {
+            background: $coop-grey;
+          }
           &:first-of-type {
-            margin-right: 1rem;
+            @media (min-width: 721px) {
+              margin-right: 1rem;
+            }
           }
         }
       }
     }
-  }
-}
-
-input.thumbs-next {
-  @media (max-width: 720px) {
-    position: fixed;
-    bottom: 2rem;
-    right: 1rem;
   }
 }
