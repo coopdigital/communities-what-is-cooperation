@@ -4,7 +4,7 @@
     <fieldset class="thumbs-up-down">
       <%= interest_fields.hidden_field :position %>
       <%= interest_fields.hidden_field :activity_id %>
-      <div class="statement">
+      <div class="statement statement-color-<%= rand(1...8) %>">
         <p>
           <%= interest_fields.object.activity.name %>
         </p>
