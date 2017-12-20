@@ -43,5 +43,19 @@ input, select {
 }
 
 fieldset {
-  
+  &.thumbs-up-down {
+    input {
+      display: none;
+    }
+    div {
+      &.choice {
+        label {
+          color: $white;
+          background: $base-biscay;
+          padding: 1.4rem 1.4rem 1.8rem 1.4rem;
+          border-radius: 0.4rem;
+        }
+      }
+    }
+  }
 }
