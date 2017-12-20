@@ -42,81 +42,72 @@ input, select {
   }
 }
 
-label {
-  font-size: 1.2rem;
-}
-
-.margin-bh {
-  margin-bottom: 0;
-}
-
 fieldset {
-  &.polar-choice {
-    position: relative;
-    > p {
-      font-size: 1.2rem;
-      font-family: 'AvenirNextLTW01-Demi';
+  &.thumbs-up-down {
+    input {
+      display: none;
     }
-    div.choice {
-      padding: 0 0 0.8rem 0;
-      div {
-        label {
-          margin: 0;
+    > p {
+      font-family:"AvenirNextLTW01-Medium";
+      font-size: 1.2rem;
+    }
+    div {
+      &.statement {
+        p {
+          font-family:"AvenirNextLTW01-Medium";
           color: $white;
-          padding: 1.8rem;
-          box-sizing: border-box;
-          font-size: 1.8rem;
-          line-height: 1.6;
-          height: auto;
-          min-height: 24vh;
-        }
-        &:nth-of-type(1) {
-          input {
-            display: none;
-            &:checked {
-              ~ label {
-                background: darken($base-biscay,10%);
-              }
-            }
+          background: $base-biscay;
+          padding: 1rem 1.8rem 1.8rem 1.8rem;
+          border-radius: 0.4rem;
+
+          font-size: 1.6rem;
+          line-height: 1.4;
+
+          @media (min-height: 600px) {
+            font-size: 2.4rem;
+            line-height: 1.6;
           }
-          label {
-            background: $base-biscay;
-            border-top-left-radius: 0.4rem;
-            border-top-right-radius: 0.4rem;
-          }
-          position: relative;
-          &:after {
-            content: 'OR';
-            font-family: 'AvenirNextLTW01-Demi';
-            font-size: 1rem;
-            text-align: center;
-            line-height: 3.2rem;
-            position: absolute;
-            width: 3.2rem;
-            height: 3.2rem;
-            color: $black;
-            background: $white;
-            bottom: -1.6rem;
-            left: calc(50% - 1.6rem);
-            border-radius: 100%;
+
+          @media (max-width: 720px) {
+            position: fixed;
+            top: 9rem;
+            bottom: 9rem;
+            left: 16px;
+            right: 1rem;
           }
         }
-        &:nth-of-type(2) {
-          input {
-            display: none;
-            &:checked {
-              ~ label {
-                background: darken($base-oregon,10%);
-              }
-            }
+      }
+      &.thumbs-up-down-choice {
+        @media (max-width: 720px) {
+          position: fixed;
+          bottom: 2rem;
+          right: 1rem;
+        }
+        label {
+          font-size: 2rem;
+          background: $offwhite;
+          border-radius: 0.4rem;
+          padding: 1rem 2rem;
+          text-align: center;
+          display: inline-block;
+          cursor: pointer;
+          border: 2px solid $offwhite;
+          &:hover {
+            border: 2px solid $coop-grey;
           }
-          label {
-            background: $base-oregon;
-            border-bottom-left-radius: 0.4rem;
-            border-bottom-right-radius: 0.4rem;
+          &:first-of-type {
+            margin-right: 1rem;
           }
         }
       }
     }
+  }
+}
+
+input.thumbs-next {
+  @media (max-width: 720px) {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
   }
 }
