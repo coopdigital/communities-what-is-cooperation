@@ -13,3 +13,27 @@
 //= require jquery
 //= require rails-ujs
 //= require_tree .
+
+$(document).ready(function(){
+  var required_interests = 5;
+
+  $('.thumbs-up-down').hide();
+  $('.thumbs-up-down:first').show();
+
+  $('.thumbs-up-down input[type=radio]').change(function(){
+    var radio_button = $(this);
+    var current_fieldset = radio_button.parents('fieldset');
+    var form = radio_button.parents('form');
+    if($('.thumbs-up-down input:checked[value=yes]').length == required_interests) {
+      form.submit();
+    } else {
+      var next_fieldset = current_fieldset.next('fieldset');
+      if(next_fieldset.length > 0){
+        current_fieldset.hide();
+        next_fieldset.show();
+      } else {
+        form.submit();
+      }
+    }
+  });
+});
