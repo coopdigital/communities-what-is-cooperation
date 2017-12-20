@@ -1,0 +1,14 @@
+
+<%= form_tag submission_activities_path(@submission) do |f| %>
+
+  <% if @ups >= @required_interests %>
+    <h1>Add your own activity</h1>
+    <%= label_tag :suggestion, "Have we missed something? Is there an activity else you'd like to do in your neighbourhood? Let us know." %>
+  <% else %>
+    <h1>We're out of ideas!</h1>
+    <%= label_tag :suggestion, "That's all the activities we've listed - but it's not all the activities there are. Tell us what you'd like to do in your neighbourhood." %>
+  <% end %>
+
+  <%= text_area_tag :suggestion %>
+  <%= submit_tag 'Next', class: 'btn btn-primary' %>
+<% end %>
