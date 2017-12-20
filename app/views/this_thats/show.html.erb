@@ -4,11 +4,10 @@
   <% @questions.each do |question| %>
     <fieldset class="thumbs-up-down">
       <p>I want to...</p>
-      <div class="choice">
-        <%= f.radio_button question[:name], 't' %>
-        <%= f.label :"#{question[:name]}_t" do %>
+      <div class="statement">
+        <p>
           <%= question[:left][:name] %>
-        <% end %>
+        </p>
       </div>
     </fieldset>
   <% end %>

@@ -48,8 +48,10 @@ fieldset {
       display: none;
     }
     div {
-      &.choice {
-        label {
+      &.statement {
+        p {
+          font-family:"AvenirNextLTW01-Medium";
+          font-size: 1.8rem;
           color: $white;
           background: $base-biscay;
           padding: 1.4rem 1.4rem 1.8rem 1.4rem;
