@@ -24,6 +24,17 @@ $base-thumb: #2E4834;
 $base-oregon: #9e3705;
 $base-tan: #610F1A;
 
+section {
+  &.feature {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid $offwhite;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 input, select {
   &[type="submit"]  {
     width: auto;
