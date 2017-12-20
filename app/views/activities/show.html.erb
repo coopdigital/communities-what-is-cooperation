@@ -1,20 +1,22 @@
 <%= form_for @submission, url: submission_activities_path(@submission), method: :put do |f| %>
+  <p>I want to...</p>
   <%= f.fields_for :interests, @interests do |interest_fields| %>
-    <%= interest_fields.hidden_field :position %>
-    <%= interest_fields.hidden_field :activity_id %>
-    <p>I want to <%= interest_fields.object.activity.name %> with people in my neighbourhood</p>
-    <%= interest_fields.label :response_yes do %>
-      <%= interest_fields.radio_button :response, 'yes' %>
-      Yes
-    <% end %>
-    <%= interest_fields.label :response_no do %>
-      <%= interest_fields.radio_button :response, 'no' %>
-      No
-    <% end %>
-    <%= interest_fields.label :response_unseen do %>
-      <%= interest_fields.radio_button :response, 'unseen' %>
-      Unseen
-    <% end %>
+    <fieldset class="thumbs-up-down">
+      <%= interest_fields.hidden_field :position %>
+      <%= interest_fields.hidden_field :activity_id %>
+      <div class="statement">
+        <p>
+          <%= interest_fields.object.activity.name %>
+        </p>
+      </div>
+      <div class="thumbs-up-down-choice">
+        <%= interest_fields.label :response_yes, '👍' %>
+        <%= interest_fields.radio_button :response, 'yes' %>
+        <%= interest_fields.label :response_no, '👎' %>
+        <%= interest_fields.radio_button :response, 'no' %>
+        <%= interest_fields.radio_button :response, 'unseen' %>
+      </div>
+    </fieldset>
   <% end %>
-  <%= f.submit 'Next', class: 'btn btn-primary' %>
+  <%= f.submit 'Next', class: 'btn btn-primary thumbs-next' %>
 <% end %>
