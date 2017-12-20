@@ -103,3 +103,11 @@ fieldset {
     }
   }
 }
+
+input.thumbs-next {
+  @media (max-width: 720px) {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+  }
+}
