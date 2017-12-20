@@ -125,6 +125,7 @@ fieldset {
         }
       }
       &.thumbs-up-down-choice {
+        display: inline-block;
         @media (max-width: 720px) {
           position: fixed;
           bottom: 2rem;
@@ -133,6 +134,7 @@ fieldset {
           display: inline-flex;
           justify-content: space-between;
         }
+
         label {
           font-size: 2rem;
           background: $offwhite;
@@ -140,14 +142,21 @@ fieldset {
           padding: 1rem 2rem;
           text-align: center;
           display: inline-block;
-          width: calc(50% - 0.5rem);
           cursor: pointer;
           border: 2px solid $offwhite;
+          @media (max-width: 720px) {
+            width: calc(50% - 0.5rem);
+          }
           &:hover {
             border: 2px solid $coop-grey;
           }
           &:active {
             background: $coop-grey;
+          }
+          &:first-of-type {
+            @media (min-width: 721px) {
+              margin-right: 1rem;
+            }
           }
         }
       }
