@@ -224,3 +224,9 @@ fieldset {
   width: 40%;
   margin: 1em auto;
 }
+
+body.activities {
+  footer {
+    display: none;
+  }
+}
