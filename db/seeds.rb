@@ -9,5 +9,5 @@
 
 Member.create(
   uuid: 'abc123',
-  postcode: 'M4 4BF'
+  postcode: 'M60 4EP'
 )

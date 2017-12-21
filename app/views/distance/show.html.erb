@@ -1,13 +1,24 @@
+<% content_for :head do %>
+  <% if Rails.application.secrets.maps_key %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.secrets.maps_key%>" type="text/javascript"></script>
+    <script src="https://releases.route360.net/r360-js/latest.js"></script>
+  <% end %>
+<% end %>
+
 <h1>How far can you travel?</h1>
 
 <%= form_for @form, as: :submission, url: submission_distance_path(@submission), method: :put do |f| %>
 
   <%= render 'shared/errors', object: @form, message: 'Please fill in all the details' %>
 
-  Find things to do
-  <%= f.number_field :distance, min: 1, pattern: "[0-9]" %>
-  minutes
-  <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
-  from home.
+  <p>
+    Find things to do
+    <%= f.number_field :distance, min: 1, max: 60, pattern: "[0-9]" %>
+    minutes
+    <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
+    from home.
+  </p>
+  <div id="member-map" data-postcode="<%=@submission.member.postcode%>" data-route360-key="<%=Rails.application.secrets.routing_key%>" style="width: 100%; height: 400px;">
+  </div>
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
