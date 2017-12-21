@@ -25,6 +25,36 @@ $base-oregon: #9e3705;
 $base-tan: #610F1A;
 
 section {
+  &.cta {
+    position: relative;
+    border-radius: 0.2rem;
+    background: $offwhite;
+    padding: 2rem;
+    margin: 2rem 0;
+    @media (min-width: 960px) {
+      width: calc(100vw - 64px);
+      padding: 8rem 2rem;
+      margin: 4rem 0;
+    }
+    img {
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    form {
+      position: relative;
+      z-index: 2;
+      border-radius: 0.4rem;
+      padding: 2rem;
+      background: $white;
+      max-width: 420px;
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
   &.feature {
     margin: 2rem 0;
     padding: 2rem 0;
@@ -53,7 +83,11 @@ input, select {
   }
 }
 
-label[for='submission_involvement'] {
+label[for='submission_involvement'],
+label[for='suggestion'],
+label[for='name'],
+label[for='email'],
+label[for='postcode'], {
   @media (max-width: 720px) {
     font-size: 1.2rem;
   }
