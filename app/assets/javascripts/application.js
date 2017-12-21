@@ -38,23 +38,57 @@ $(document).ready(function(){
   });
 });
 
+
+$(document).ready(function(){
+  if($('#member-map').length > 0){
+    initMap();
+  }
+});
+
 function initMap(){
-  console.log('MAPS LOADED');
   var geocoder = new google.maps.Geocoder();
   var postcode = $('#member-map').data('postcode');
   geocoder.geocode( {address: postcode, componentRestrictions: {country: 'UK'}}, function(results, status) {
     if (status == 'OK') {
-      console.log(results[0].geometry.location);
+      var postcode_centre = results[0].geometry.location;
       var map = new google.maps.Map(document.getElementById('member-map'), {
-        center: results[0].geometry.location,
+        center: postcode_centre,
         zoom: 14
       });
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
+      var colorPolygonLayer = r360.googleMapsPolygonLayer(map);
+      setDistance(colorPolygonLayer, postcode_centre);
+      $('#submission_distance').change(function(){
+        setDistance(colorPolygonLayer, postcode_centre);
       });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      $('#submission_distance_mode').change(function(){
+        setDistance(colorPolygonLayer, postcode_centre);
+      });
     }
   });
+}
+
+function setDistance(colorPolygonLayer, lat_lng){
+  var distanceMinutes = $('#submission_distance').val();
+  var travelType = $('#submission_distance_mode').val();
+  showDistance(colorPolygonLayer, lat_lng.lat(), lat_lng.lng(), travelType, distanceMinutes * 60);
+}
+
+function showDistance(layer, lat, lng, travelType, time) {
+  var travelOptions = r360.travelOptions();
+  travelOptions.setServiceKey($('#member-map').data('route360-key'));
+  travelOptions.setServiceUrl("https://service.route360.net/britishisles/");
+  travelOptions.addSource({ lat: lat, lng: lng });
+  travelOptions.setTravelTimes([time]);
+  travelOptions.setTravelType(travelType);
+
+  // call the service
+  r360.PolygonService.getTravelTimePolygons(travelOptions,
+    function(polygons) {
+      layer.update(polygons);
+      layer.fitMap();
+    },
+    function(status, message) {
+      console.log("The route360 API is not available - double check your configuration options.");
+    }
+  );
 }
