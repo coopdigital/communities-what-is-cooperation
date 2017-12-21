@@ -66,6 +66,6 @@ Rails.application.config.spotlight.activities = [
   "swap baby clothes",
   "host a birthday party",
   "go to a show",
-  "organise to closed the street for playing",
+  "organise to close the street for playing",
   "put on an outdoor cinema night"
 ]
