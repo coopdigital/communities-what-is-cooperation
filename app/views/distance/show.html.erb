@@ -18,7 +18,9 @@
     <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
     from home.
   </p>
-  <div id="member-map" data-postcode="<%=@submission.member.postcode%>" data-route360-key="<%=Rails.application.secrets.routing_key%>" style="width: 100%; height: 400px;">
-  </div>
+  <% if Rails.application.secrets.maps_key %>
+    <div id="member-map" data-postcode="<%=@submission.member.postcode%>" data-route360-key="<%=Rails.application.secrets.routing_key%>" style="width: 100%; height: 400px;">
+    </div>
+  <% end %>
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
