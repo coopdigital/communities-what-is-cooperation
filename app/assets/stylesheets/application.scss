@@ -102,12 +102,6 @@ p.end-statement {
   font-family:"AvenirNextLTW01-Medium";
   font-size: 1.2rem;
   line-height: 1.4;
-  @media (max-width: 720px) {
-    // position: fixed;
-    // bottom: 9rem;
-    // left: 16px;
-    // right: 1rem;
-  }
 }
 
 fieldset {
@@ -121,7 +115,7 @@ fieldset {
           font-family:"AvenirNextLTW01-Medium";
           color: $white;
           background: $base-biscay;
-          padding: 1rem 1.8rem 1.8rem 1.8rem;
+          padding: 1rem 1.8rem 1.4rem 1.8rem;
           border-radius: 0.4rem;
 
           font-size: 1.6rem;
@@ -132,12 +126,8 @@ fieldset {
             line-height: 1.4;
           }
 
-          @media (max-width: 720px) {
-            // position: fixed;
-            // top: 9rem;
-            // bottom: 12rem;
-            // left: 16px;
-            // right: 1rem;
+          @media (min-height: 601px) and (max-width: 680px) {
+            font-size: 5vh;
           }
         }
         &.statement-color-1 {
@@ -214,6 +204,7 @@ fieldset {
           display: inline-block;
           cursor: pointer;
           border: 2px solid $offwhite;
+
           @media (max-width: 720px) {
             width: calc(50% - 0.5rem);
           }
