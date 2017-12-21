@@ -64,6 +64,17 @@ p.begin-statement {
   font-size: 1.2rem;
 }
 
+p.end-statement {
+  font-family:"AvenirNextLTW01-Medium";
+  font-size: 1.2rem;
+  @media (max-width: 720px) {
+    position: fixed;
+    bottom: 9rem;
+    left: 16px;
+    right: 1rem;
+  }
+}
+
 fieldset {
   &.thumbs-up-down {
     input {
@@ -89,7 +100,7 @@ fieldset {
           @media (max-width: 720px) {
             position: fixed;
             top: 9rem;
-            bottom: 9rem;
+            bottom: 12rem;
             left: 16px;
             right: 1rem;
           }

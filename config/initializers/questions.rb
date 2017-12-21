@@ -10,7 +10,7 @@ Rails.application.config.spotlight.activities = [
   "organise a battle of the bands",
   "write songs",
   "host a rap battle",
-  "learn to dj",
+  "learn to DJ",
   "grow a garden",
   "plant some trees",
   "make a community compost",
