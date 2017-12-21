@@ -1,3 +1,9 @@
+<% content_for :head do %>
+  <% if Rails.application.secrets.maps_key %>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.secrets.maps_key%>&callback=initMap" type="text/javascript"></script>
+  <% end %>
+<% end %>
+
 <h1>How far can you travel?</h1>
 
 <%= form_for @form, as: :submission, url: submission_distance_path(@submission), method: :put do |f| %>
@@ -10,4 +16,6 @@
   <%= f.select :distance_mode, options_for_select(@form.transport_options)%>
   from home.
   <%= f.submit 'Next', class: 'btn btn-primary' %>
+  <div id="member-map" data-postcode="<%=@submission.member.postcode%>" style="width: 100%; height: 500px;">
+  </div>
 <% end %>

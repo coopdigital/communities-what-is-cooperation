@@ -37,3 +37,24 @@ $(document).ready(function(){
     }
   });
 });
+
+function initMap(){
+  console.log('MAPS LOADED');
+  var geocoder = new google.maps.Geocoder();
+  var postcode = $('#member-map').data('postcode');
+  geocoder.geocode( {address: postcode, componentRestrictions: {country: 'UK'}}, function(results, status) {
+    if (status == 'OK') {
+      console.log(results[0].geometry.location);
+      var map = new google.maps.Map(document.getElementById('member-map'), {
+        center: results[0].geometry.location,
+        zoom: 14
+      });
+      var marker = new google.maps.Marker({
+        map: map,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
