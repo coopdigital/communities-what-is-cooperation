@@ -92,3 +92,24 @@ function showDistance(layer, lat, lng, travelType, time) {
     }
   );
 }
+
+$(document).ready(function(){
+  // Parse the URL parameter
+  function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  // Give the parameter a variable name
+  var newLocation = getParameterByName('location');
+  if (newLocation == null) {
+    console.log("No location set");
+  } else {
+    $('#set-location').replaceWith(newLocation);
+  }
+
+});

@@ -174,12 +174,12 @@ fieldset {
       &.thumbs-up-down-choice {
         display: inline-block;
 
-        @media (max-height: 600px) {
+        @media (max-height: 549px) {
           margin-top: 1rem;
           width: 100%;
         }
 
-        @media (min-height: 601px) and (max-width: 720px) {
+        @media (min-height: 550px) and (max-width: 720px) {
           position: fixed;
           bottom: 1rem;
           left: 1rem;
