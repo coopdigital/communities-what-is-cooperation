@@ -3,7 +3,8 @@ class DistanceController < ApplicationController
   before_action :find_submission, :redirect_if_finished
 
   def show
-    @form = DistanceForm.new(distance: 10)
+    @form = DistanceForm.new(distance: 20)
+    @postcode = @submission.member.postcode
   end
 
   def update
@@ -16,9 +17,4 @@ class DistanceController < ApplicationController
     end
   end
 
-  private
-
-  def find_submission
-    @submission = Submission.find_by!(uuid: params[:submission_id])
-  end
 end
