@@ -30,10 +30,4 @@ class ActivitiesController < ApplicationController
     redirect_to submission_path(@submission)
   end
 
-  private
-
-  def find_submission
-    @submission = Submission.find_by!(uuid: params[:submission_id])
-  end
-
 end

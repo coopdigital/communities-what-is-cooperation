@@ -1,0 +1,23 @@
+<h1>
+  One last thing
+</h1>
+
+<p>
+  Let us know your name and email address and we will be in touch with
+</p>
+
+<section class="cta">
+  <img src="<%= image_path 'bunting.svg' %>" alt="Bunting">
+  <form id="join-form-1" action="https://docs.google.com/forms/d/e/1FAIpQLSf9_COdZQmL8v5JuhkBOhk7dSRENeMNF-CMTv073OE69FXiaw/formResponse" method="post">
+    <label for="name">Your name</label>
+    <input id="name" type="text" name="entry.2140969632" value="" required><br />
+
+    <label for="email">Your email address</label>
+    <input id="email" type="email" name="entry.1642471887" value="" required><br />
+
+    <input id="postcode" type="hidden" name="entry.1335307826" value="<%=@submission.member.postcode %>" required><br />
+    <input id="postcode" type="hidden" name="entry.752726998" value="<%=@submission.member.uuid %>" required><br />
+
+    <button class="btn btn-primary" type="submit">Finish</button>
+  </form>
+</section>

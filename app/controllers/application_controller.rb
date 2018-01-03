@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
       redirect_to submission_path(@submission)
     end
   end
+
+  def find_submission
+    @submission = Submission.find_by!(uuid: params[:submission_id])
+  end
+
 end

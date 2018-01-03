@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-
+    redirect_to new_member_path
   end
 
   def show

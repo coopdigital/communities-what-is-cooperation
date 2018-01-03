@@ -10,15 +10,14 @@ class InvolvementController < ApplicationController
     @form = InvolvementForm.new(params.require(:submission).to_unsafe_h)
     if @form.valid?
       @submission.update!(@form.attributes)
-      redirect_to submission_distance_path(@submission)
+      if @submission.member.anonymous?
+        redirect_to submission_postcode_path(@submission)
+      else
+        redirect_to submission_distance_path(@submission)
+      end
     else
       render :show
     end
   end
 
-  private
-
-  def find_submission
-    @submission = Submission.find_by!(uuid: params[:submission_id])
-  end
 end
