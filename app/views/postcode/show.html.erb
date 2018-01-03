@@ -2,7 +2,7 @@
 
 <%= form_for @form, as: :submission, url: submission_postcode_path(@submission), method: :put do |f| %>
 
-  <%= render 'shared/errors', object: @form, message: 'Please fill in all the details' %>
+  <%= render 'shared/errors', object: @form, message: 'Please enter a postcode' %>
 
   <%= f.label :postcode, 'We will use this information to find things near you' %>
   <%= f.text_field :postcode, required: true%>
