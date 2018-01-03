@@ -105,7 +105,11 @@ $(document).ready(function(){
       return decodeURIComponent(results[2].replace(/\+/g, " "));
   }
   // Give the parameter a variable name
-  var dynamicContent = getParameterByName('location');
-  $('#set-location').replaceWith(dynamicContent);
+  var newLocation = getParameterByName('location');
+  if (newLocation == null) {
+    console.log("No location set");
+  } else {
+    $('#set-location').replaceWith(newLocation);
+  }
 
 });
