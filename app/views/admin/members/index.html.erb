@@ -48,5 +48,41 @@
   </tbody>
 </table>
 
+<h2>Member map</h2>
 <div id="admin-map" style="width: 100%; height: 500px;">
 </div>
+
+<hr />
+
+<h2>Collected involvement repsonses</h2>
+
+<ul>
+  <% @involvement_responses.each do |involvement| %>
+    <li><%=involvement%></li>
+  <% end %>
+</ul>
+
+<h2>Collected activity suggestions</h2>
+
+<ul>
+  <% @activity_suggestions.each do |suggestion| %>
+    <li><%=suggestion%></li>
+  <% end %>
+</ul>
+
+<hr />
+
+<h2>Activities</h2>
+
+<h3>👍</h3>
+<ul>
+  <% @interests.each do |activity, count| %>
+    <li><%=activity.name%> (<%=count%>)</li>
+  <% end %>
+</ul>
+<h3>👎</h3>
+<ul>
+  <% @disinterests.each do |activity, count| %>
+    <li><%=activity.name%> (<%=count%>)</li>
+  <% end %>
+</ul>
