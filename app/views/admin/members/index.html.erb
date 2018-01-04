@@ -24,6 +24,7 @@
     <tr>
       <th>ID</th>
       <th>Postcode</th>
+      <th>Source</th>
       <th>Links</th>
       <th>Submissions</th>
     </tr>
@@ -33,6 +34,7 @@
       <tr>
         <td><%= member.uuid %></td>
         <td><%= member.postcode %></td>
+        <td><%= member.source %></td>
         <td><%= link_to 'Landing page', member_path(member) %></td>
         <td class="submissions <%=member.status%>"><%= link_to member.submissions.count, admin_member_path(member) %></td>
       </tr>
