@@ -122,19 +122,21 @@ $(document).ready(function(){
     });
     $('#members .member').each(function(){
       var member = $(this);
-      var latLng = new google.maps.LatLng(member.data('latitude'),member.data('longitude'));
-      var marker = new google.maps.Marker({
-        position: latLng,
-        title: member.find('.postcode').html()
-      });
-      var infowindow = new google.maps.InfoWindow({
-        content: member.find('.postcode').html() + ' ' + member.find('.submissions').html()
-      });
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
-      bounds.extend(marker.getPosition());
-      marker.setMap(map);
+      if(member.data('latitude')){
+        var latLng = new google.maps.LatLng(member.data('latitude'),member.data('longitude'));
+        var marker = new google.maps.Marker({
+          position: latLng,
+          title: member.find('.postcode').html()
+        });
+        var infowindow = new google.maps.InfoWindow({
+          content: member.find('.postcode').html() + ' ' + member.find('.submissions').html()
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        bounds.extend(marker.getPosition());
+        marker.setMap(map);
+      }
     });
     map.fitBounds(bounds);
   }
