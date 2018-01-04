@@ -235,3 +235,20 @@ body.activities {
     display: none;
   }
 }
+
+.submissions {
+  a {
+    padding: 5px;
+    color: white;
+    border-color: white;
+  }
+  &.finished a{
+    background-color: $success-green;
+  }
+  &.partial a{
+    background-color: $info-orange;
+  }
+  &.none a{
+    background-color: $saleerror-red;
+  }
+}

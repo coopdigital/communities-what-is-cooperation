@@ -1,5 +1,7 @@
 <h1><%= @member.uuid %> (<%=@member.postcode%>)</h1>
+<h2>Source: <%=@member.source%></h2>
 
+<hr />
 
 <% @member.submissions.by_created.each_with_index do |submission, index| %>
   <h2>
