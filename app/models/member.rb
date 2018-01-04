@@ -1,6 +1,9 @@
 class Member < ApplicationRecord
   has_many :submissions
 
+  geocoded_by :geocoding_address
+  after_validation :geocode, if: ->(obj){ obj.postcode.present? && obj.postcode_changed? }
+
   def anonymous?
     source == 'anonymous'
   end
@@ -12,6 +15,14 @@ class Member < ApplicationRecord
       'partial'
     else
       'none'
+    end
+  end
+
+  def geocoding_address
+    if postcode.blank?
+      nil
+    else
+      "#{postcode}, UK"
     end
   end
 

@@ -1,3 +1,9 @@
+<% content_for :head do %>
+  <% if Rails.application.secrets.maps_key %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.secrets.maps_key%>" type="text/javascript"></script>
+  <% end %>
+<% end %>
+
 <h1>Members</h1>
 
 <% if flash[:member_uuid] %>
@@ -29,11 +35,11 @@
       <th>Submissions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="members">
     <% @members.each do |member| %>
-      <tr>
+      <tr class="member" data-latitude="<%=member.latitude%>" data-longitude="<%=member.longitude%>">
         <td><%= member.uuid %></td>
-        <td><%= member.postcode %></td>
+        <td class="postcode"><%= member.postcode %></td>
         <td><%= member.source %></td>
         <td><%= link_to 'Landing page', member_path(member) %></td>
         <td class="submissions <%=member.status%>"><%= link_to member.submissions.count, admin_member_path(member) %></td>
@@ -41,3 +47,42 @@
     <% end %>
   </tbody>
 </table>
+
+<h2>Member map</h2>
+<div id="admin-map" style="width: 100%; height: 500px;">
+</div>
+
+<hr />
+
+<h2>Collected involvement repsonses</h2>
+
+<ul>
+  <% @involvement_responses.each do |involvement| %>
+    <li><%=involvement%></li>
+  <% end %>
+</ul>
+
+<h2>Collected activity suggestions</h2>
+
+<ul>
+  <% @activity_suggestions.each do |suggestion| %>
+    <li><%=suggestion%></li>
+  <% end %>
+</ul>
+
+<hr />
+
+<h2>Activities</h2>
+
+<h3>👍</h3>
+<ul>
+  <% @interests.each do |activity, count| %>
+    <li><%=activity.name%> (<%=count%>)</li>
+  <% end %>
+</ul>
+<h3>👎</h3>
+<ul>
+  <% @disinterests.each do |activity, count| %>
+    <li><%=activity.name%> (<%=count%>)</li>
+  <% end %>
+</ul>
