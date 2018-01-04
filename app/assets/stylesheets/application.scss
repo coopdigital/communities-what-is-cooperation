@@ -238,15 +238,17 @@ body.activities {
 
 .submissions {
   a {
-    border-width: 7px;
+    padding: 5px;
+    color: white;
+    border-color: white;
   }
   &.finished a{
-    border-color: $success-green;
+    background-color: $success-green;
   }
   &.partial a{
-    border-color: $info-orange;
+    background-color: $info-orange;
   }
   &.none a{
-    border-color: $saleerror-red;
+    background-color: $saleerror-red;
   }
 }
