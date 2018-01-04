@@ -1,24 +1,14 @@
-# README
+# Running a local environment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app expects 2 environment variables:
 
-Things you may want to cover:
+* `MAPS_KEY`
+* `ROUTING_KEY`
 
-* Ruby version
+These are necessary for presenting the journey map to the user, and to geocode the postcodes to display back to the admin.
 
-* System dependencies
+You can run a rails server with these variables using the following command:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+ROUTING_KEY=123ABC MAPS_KEY=ABC123 bin/rails s
+```
