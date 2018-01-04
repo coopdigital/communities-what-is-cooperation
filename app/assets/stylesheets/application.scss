@@ -235,3 +235,18 @@ body.activities {
     display: none;
   }
 }
+
+.submissions {
+  a {
+    border-width: 7px;
+  }
+  &.finished a{
+    border-color: $success-green;
+  }
+  &.partial a{
+    border-color: $info-orange;
+  }
+  &.none a{
+    border-color: $saleerror-red;
+  }
+}
