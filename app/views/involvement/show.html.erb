@@ -4,7 +4,7 @@
 
   <%= render 'shared/errors', object: @form, message: 'Please answer this question so we can create personalised suggestions for you' %>
 
-  <%= f.label :involvement, 'This question is optional but we will use this information to match you to opportunities.' %>
+  <%= f.label :involvement, 'This question is optional but we will use this information to better match you to opportunities.' %>
   <%= f.text_area :involvement %>
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
