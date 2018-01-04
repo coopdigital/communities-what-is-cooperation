@@ -1,10 +1,10 @@
-<h1>Why do you want to get involved?</h1>
+<h1>Why do you want to do something in your neighbourhood?</h1>
 
 <%= form_for @form, as: :submission, url: submission_involvement_path(@submission), method: :put do |f| %>
 
   <%= render 'shared/errors', object: @form, message: 'Please answer this question so we can create personalised suggestions for you' %>
 
-  <%= f.label :involvement, 'We will use this information to match you to opportunities' %>
+  <%= f.label :involvement, 'This question is optional but we will use this information to better match you to opportunities.' %>
   <%= f.text_area :involvement %>
   <%= f.submit 'Next', class: 'btn btn-primary' %>
 <% end %>
