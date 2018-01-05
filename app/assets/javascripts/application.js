@@ -14,6 +14,42 @@
 //= require rails-ujs
 //= require_tree .
 
+function handleFormSubmit(event, eventCategory, eventAction, eventLabel) {
+  // this is a bit tricksy, since submitting forms causes the page to unload
+  // and stop javascript running.
+  // See:
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits#knowing_when_the_hit_has_been_sent
+
+  var form = event.target,
+      // Keeps track of whether or not the form has been submitted.
+      // This prevents the form from being submitted twice in cases
+      // where `hitCallback` fires normally.
+      formSubmitted = false;
+
+  // Prevents the browser from submitting the form
+  // and thus unloading the current page.
+  event.preventDefault();
+
+  setTimeout(submitForm, 1000);  // in case the GA hit callback never fires
+
+  function submitForm() {
+    if (!formSubmitted) {
+      formSubmitted = true;
+      form.submit();
+    }
+  }
+
+  gtag('event', 'form_submission', {
+    event_category: eventCategory,
+    event_action: eventAction,
+    event_label: eventLabel,
+    event_callback: function() {
+      submitForm();
+    }
+  });
+
+}
+
 $(document).ready(function(){
   var required_interests = 5;
 
@@ -37,9 +73,9 @@ $(document).ready(function(){
     }
   });
 
-  $('#join-form-1').on('submit', function(){
+  $('#join-form-1').on('submit', function(event){
     if(typeof ga != 'undefined'){
-      ga('send', 'event', 'Form', 'submit', 'join-form-1');
+      handleFormSubmit(event, 'Form', 'submit', 'join-form-1');
     }
   });
 });
