@@ -6,7 +6,7 @@ class MembersController < ApplicationController
   def create
     member = Member.create!(
       uuid: SecureRandom.hex(3),
-      source: 'anonymous'
+      source: cookies[:source] || 'anonymous'
     )
     submission = member.submissions.create!(uuid: SecureRandom.hex(3))
     redirect_to submission_involvement_path(submission)
