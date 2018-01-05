@@ -36,6 +36,12 @@ $(document).ready(function(){
       }
     }
   });
+
+  $('#join-form-1').on('submit', function(){
+    if(typeof ga != 'undefined'){
+      ga('send', 'event', 'Form', 'submit', 'join-form-1');
+    }
+  });
 });
 
 
