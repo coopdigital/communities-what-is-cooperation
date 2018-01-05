@@ -5,7 +5,7 @@ class Member < ApplicationRecord
   after_validation :geocode, if: ->(obj){ obj.postcode.present? && obj.postcode_changed? }
 
   def anonymous?
-    source == 'anonymous'
+    source != 'admin'
   end
 
   def status
