@@ -21,30 +21,7 @@
 <% end %>
 <hr />
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Created</th>
-      <th>Postcode</th>
-      <th>Source</th>
-      <th>Links</th>
-      <th>Submissions</th>
-    </tr>
-  </thead>
-  <tbody id="members">
-    <% @members.each do |member| %>
-      <tr class="member" data-latitude="<%=member.latitude%>" data-longitude="<%=member.longitude%>">
-        <td><%= member.uuid %></td>
-        <td><%= member.created_at %></td>
-        <td class="postcode"><%= member.postcode %></td>
-        <td><%= member.source %></td>
-        <td><%= link_to 'Landing page', member_path(member) %></td>
-        <td class="submissions <%=member.status%>"><%= link_to member.submissions.count, admin_member_path(member) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'admin/members/list', members: @members %>
 
 <h2>Member map</h2>
 <div id="admin-map" style="width: 100%; height: 500px;">
