@@ -309,6 +309,28 @@ body.recommendations-page {
             }
           }
         }
+        div.location-details {
+          border-radius: 0.4rem;
+          border: 1px solid $offwhite;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          div.map {
+            width: 100%;
+            height: 6rem;
+            background: green;
+          }
+          dl {
+            font-size: 0.8rem;
+            padding: 0 1rem;
+            dt, dd {
+              margin: 0;
+              padding: 0;
+              &.availability {
+                color: $button-green;
+              }
+            }
+          }
+        }
       }
     }
     footer {
