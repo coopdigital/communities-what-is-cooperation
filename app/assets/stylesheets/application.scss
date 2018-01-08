@@ -253,6 +253,12 @@ body.activities {
   }
 }
 
+.helper-text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: $coop-grey;
+}
+
 body.recommendations-page {
   background: $offwhite;
   header {
@@ -273,15 +279,44 @@ body.recommendations-page {
         font-family: 'AvenirNextLTW01-Demi';
       }
     }
+    section {
+      &.recommendation-details {
+        header {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.8rem;
+          margin-bottom: 1rem;
+          img {
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+          }
+          dl {
+            margin: 0;
+            padding: 0;
+            width: calc(100% - (48px + 1rem));
+            dt {
+              font-size: 1rem;
+              font-family:"AvenirNextLTW01-Medium";
+            }
+            dt, dd {
+              margin: 0;
+              line-height: 1.6;
+              &.note {
+                @extend .helper-text;
+              }
+            }
+          }
+        }
+      }
+    }
     footer {
       display: flex;
       justify-content: space-between;
       padding: 0.8rem 0 0 0;
       border-top: $light-grey 1px solid;
       p, a {
-        font-size: 0.8rem;
-        line-height: 1.6;
-        color: $coop-grey;
+        @extend .helper-text;
         padding: 0;
         margin: 0;
       }
