@@ -258,4 +258,35 @@ body.recommendations-page {
   header {
     border-bottom: none;
   }
+  section.recommendation {
+    background: $white;
+    padding: 1rem;
+    h1 {
+      font-size: 1rem;
+      font-family:"AvenirNextLTW01-Medium";
+      span {
+        font-family: 'AvenirNextLTW01-Demi';
+      }
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.8rem 0 0 0;
+      border-top: $light-grey 1px solid;
+      p, a {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        color: $coop-grey;
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        width: 50%;
+      }
+      a {
+        border-bottom-color: $mid-grey;
+        align-self: flex-start;
+      }
+    }
+  }
 }
