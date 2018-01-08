@@ -29,6 +29,7 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>Created</th>
       <th>Postcode</th>
       <th>Source</th>
       <th>Links</th>
@@ -39,6 +40,7 @@
     <% @members.each do |member| %>
       <tr class="member" data-latitude="<%=member.latitude%>" data-longitude="<%=member.longitude%>">
         <td><%= member.uuid %></td>
+        <td><%= member.created_at %></td>
         <td class="postcode"><%= member.postcode %></td>
         <td><%= member.source %></td>
         <td><%= link_to 'Landing page', member_path(member) %></td>
