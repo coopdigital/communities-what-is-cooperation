@@ -1,10 +1,11 @@
 <%= render 'shared/google_maps' %>
 
-<h1>Members</h1>
+<h1>Final participants</h1>
+
 
 <% if flash[:member_uuid] %>
   <hr />
-  <p class="message message-success">Member created. Remember to copy the details below back into the spreadsheet.</p>
+  <p class="message message-success">Participant created. Remember to copy the details below back into the spreadsheet.</p>
   <ul>
     <li><strong>ID:</strong> <%= flash[:member_uuid] %></li>
     <li><strong>Link:</strong> <%= link_to member_url(flash[:member_uuid]), member_path(flash[:member_uuid]) %></li>
@@ -12,39 +13,8 @@
 <% end %>
 
 <hr />
-<h2>Create a new member</h2>
-<p class="message message-info">Enter the member's postcode below and a unique ID and link will be created:</p>
-<%= form_tag admin_members_path, method: :post do %>
-  <%= label_tag :postcode %>
-  <%= text_field_tag :postcode, params[:postcode], required: true %>
-  <%= submit_tag 'Create member', class: 'btn btn-primary'%>
-<% end %>
-<hr />
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Created</th>
-      <th>Postcode</th>
-      <th>Source</th>
-      <th>Links</th>
-      <th>Submissions</th>
-    </tr>
-  </thead>
-  <tbody id="members">
-    <% @members.each do |member| %>
-      <tr class="member" data-latitude="<%=member.latitude%>" data-longitude="<%=member.longitude%>">
-        <td><%= member.uuid %></td>
-        <td><%= member.created_at %></td>
-        <td class="postcode"><%= member.postcode %></td>
-        <td><%= member.source %></td>
-        <td><%= link_to 'Landing page', member_path(member) %></td>
-        <td class="submissions <%=member.status%>"><%= link_to member.submissions.count, admin_member_path(member) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'admin/members/list', members: @members %>
 
 <h2>Member map</h2>
 <div id="admin-map" style="width: 100%; height: 500px;">
@@ -84,3 +54,15 @@
     <li><%=activity.name%> (<%=count%>)</li>
   <% end %>
 </ul>
+
+<hr />
+<%= link_to 'All participants', admin_archived_members_path %>
+<hr />
+<h2>Create a new participant</h2>
+<p class="message message-info">Enter the participant's postcode below and a unique ID and link will be created:</p>
+<%= form_tag admin_members_path, method: :post do %>
+  <%= label_tag :postcode %>
+  <%= text_field_tag :postcode, params[:postcode], required: true %>
+  <%= submit_tag 'Create participant', class: 'btn btn-primary'%>
+<% end %>
+<hr />

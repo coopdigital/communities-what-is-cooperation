@@ -4,6 +4,7 @@ class Submission < ApplicationRecord
 
   scope :by_created, ->{ order('created_at ASC')}
   scope :finished, ->{ where(finished: true) }
+  scope :final, ->{ where(final: true) }
 
   accepts_nested_attributes_for :interests
 
