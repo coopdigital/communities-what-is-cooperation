@@ -6,5 +6,5 @@ class Activity < ApplicationRecord
   scope :active, -> { where(active: true) }
   scope :with_thumbs_up, -> { joins(:interests).where(interests: {response: 'yes'}).group('activities.id')}
   scope :with_thumbs_down, -> { joins(:interests).where(interests: {response: 'no'}).group('activities.id')}
-  scope :with_final_submission, ->{ joins(:submissions).merge(Submission.final) }
+  scope :with_final_submission, ->{ joins(:submissions).where('submissions.final' => true)}
 end

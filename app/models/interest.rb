@@ -7,6 +7,7 @@ class Interest < ApplicationRecord
   scope :thumbs_up, -> { where(response: 'yes') }
   scope :thumbs_down, -> { where(response: 'no') }
   scope :unseen, -> { where(response: 'unseen') }
+  scope :with_final_submission, ->{ joins(:submission).where('submissions.final' => true)}
 
   validates :activity, :submission, :response, :position, presence: true
 
