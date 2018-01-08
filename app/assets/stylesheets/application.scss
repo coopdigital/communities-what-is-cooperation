@@ -295,16 +295,17 @@ body.recommendations-page {
             margin: 0;
             padding: 0;
             width: calc(100% - (48px + 1rem));
-            dt {
-              font-size: 1rem;
-              font-family:"AvenirNextLTW01-Medium";
-            }
             dt, dd {
               margin: 0;
               line-height: 1.6;
               &.note {
                 @extend .helper-text;
               }
+            }
+            dt {
+              font-size: 1rem;
+              line-height: 1.4;
+              font-family:"AvenirNextLTW01-Medium";
             }
           }
         }
