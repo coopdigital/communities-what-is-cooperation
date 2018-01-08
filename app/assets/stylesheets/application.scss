@@ -253,10 +253,17 @@ body.activities {
   }
 }
 
+/// Recommendations
+
 .helper-text {
   font-size: 0.8rem;
   line-height: 1.6;
   color: $coop-grey;
+}
+
+.info-warning {
+  font-family:"AvenirNextLTW01-Medium";
+  color: $info-orange;
 }
 
 body.recommendations-page {
@@ -281,6 +288,15 @@ body.recommendations-page {
       }
       span {
         font-family: 'AvenirNextLTW01-Demi';
+        &.bonus {
+          color: $button-green;
+        }
+      }
+    }
+    p.expanded-intro {
+      margin-bottom: 1.8rem;
+      @media (min-width: 750px) {
+        margin-bottom: 2.8rem;
       }
     }
     section {
