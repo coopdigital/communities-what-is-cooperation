@@ -1,8 +1,4 @@
-<% content_for :head do %>
-  <% if Rails.application.secrets.maps_key %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<%=Rails.application.secrets.maps_key%>" type="text/javascript"></script>
-  <% end %>
-<% end %>
+<%= render 'shared/google_maps' %>
 
 <h1>Members</h1>
 
@@ -77,7 +73,7 @@
 <h3>👍</h3>
 <ul>
   <% @interests.each do |activity, count| %>
-    <li><%=activity.name%> (<%=count%>)</li>
+    <li><%=link_to activity.name, admin_activity_path(activity) %> (<%=count%>)</li>
   <% end %>
 </ul>
 <h3>👎</h3>

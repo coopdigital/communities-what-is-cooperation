@@ -1,0 +1,30 @@
+<%= render 'shared/google_maps' %>
+
+<h1><%=@activity.name %></h1>
+
+<h2>Interested members (<%= @interested_members.count %>)</h2>
+<div id="admin-map" style="width: 100%; height: 500px;">
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Created</th>
+      <th>Postcode</th>
+      <th>Source</th>
+      <th>Submissions</th>
+    </tr>
+  </thead>
+  <tbody id="members">
+    <% @interested_members.each do |member| %>
+      <tr class="member" data-latitude="<%=member.latitude%>" data-longitude="<%=member.longitude%>">
+        <td><%= member.uuid %></td>
+        <td><%= member.created_at %></td>
+        <td class="postcode"><%= member.postcode %></td>
+        <td><%= member.source %></td>
+        <td class="submissions <%=member.status%>"><%= link_to member.submissions.count, admin_member_path(member) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
