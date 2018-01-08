@@ -252,3 +252,10 @@ body.activities {
     background-color: $saleerror-red;
   }
 }
+
+body.recommendations-page {
+  background: $offwhite;
+  header {
+    border-bottom: none;
+  }
+}
