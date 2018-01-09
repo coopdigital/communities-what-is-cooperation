@@ -265,6 +265,11 @@ body.recommendations-page {
     }
   }
 
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+
   .large-7 {
     width: 100%;
   }
@@ -395,7 +400,7 @@ body.recommendations-page {
           overflow: hidden;
           div.map {
             width: 100%;
-            height: 6rem;
+            height: 8rem;
             background: green;
           }
           dl {
