@@ -1,0 +1,24 @@
+<%= intro my_name: 'Sophy', avatar: 'sophy.png' do %>
+  <p>Hi, I’ve found some things for you to do in Leeds. Please take a look and let me know how you get on!</p>
+<% end %>
+
+<%= recommendation id: 'getting-fit-roundhay-park', why: 'You said you’d like to go to an exercise class' do %>
+  <h1><span>What about getting fit in Roundhay Park</span> - I found some bootcamp outdoor exercise sessions - is this the right sort of thing for you? You don’t have to be super fit to take part, and it’s really varied - every class is different. I’ve done bootcamp fitness before - and I’m no athlete - it’s a nice way to meet people in your area. It is quite hard work but you do feel great afterwards.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>UK Outdoor Fitness Group</dt>
+        <dd>Tuesdays and Fridays 9.30 - 10.30am</dd>
+        <dd>£7 per session</dd>
+        <dd>Sign up here: <a href="https://ukoutdoorfitness.com/venue/roundhay-park/">https://ukoutdoorfitness.com/venue/roundhay-park/</a></dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.833567, longitude: -1.503924) %>
+      <dl>
+        <dd>35 minutes walk</dd>
+        <dd class="availability">Next session: Tuesday 16 January 9.30am</dd>
+      </dl>
+    </div>
+  </section>
+<% end %>

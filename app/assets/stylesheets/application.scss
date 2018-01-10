@@ -256,6 +256,43 @@ body.activities {
 /// Recommendations
 
 body.recommendations-page {
+
+  .central-layout {
+    max-width: 480px;
+    @media (min-width: 750px) {
+      margin: 0 auto 1rem auto;
+      max-width: 520px;
+    }
+  }
+
+  section {
+    &.recommendation-page-intro {
+      @extend .central-layout;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      img {
+        width: 72px;
+        height: 72px;
+        border-radius: 100%;
+      }
+      div {
+        padding-left: 1rem;
+        p {
+          font-family:"AvenirNextLTW01-Medium";
+          font-size: 1.2rem;
+          line-height: 1.4;
+          @media (min-width: 720px) {
+            font-size: 1.8rem;
+          }
+        }
+        span {
+
+        }
+      }
+    }
+  }
+
   .content-wrapper > header {
     a.coop-logo, a.coop-logo-large {
       @media (min-width: 750px) {
@@ -304,12 +341,8 @@ body.recommendations-page {
     background: $white;
     padding: 1rem;
     margin-bottom: 1rem;
-    max-width: 480px;
-    @media (min-width: 750px) {
-      margin: 0 auto 1rem auto;
-      padding: 2rem 2rem 1rem 2rem;
-      max-width: 520px;
-    }
+    padding: 2rem 2rem 1rem 2rem;
+    @extend .central-layout;
     h1 {
       font-size: 1rem;
       font-family:"AvenirNextLTW01-Medium";
