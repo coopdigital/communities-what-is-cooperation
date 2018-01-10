@@ -279,8 +279,14 @@ body.recommendations-page {
         border-radius: 100%;
       }
       div {
+        padding-left: 1rem;
         p {
-
+          font-family:"AvenirNextLTW01-Medium";
+          font-size: 1.2rem;
+          line-height: 1.4;
+          @media (min-width: 720px) {
+            font-size: 1.8rem;
+          }
         }
         span {
 
