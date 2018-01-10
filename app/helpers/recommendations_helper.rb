@@ -25,4 +25,8 @@ module RecommendationsHelper
     render 'recommendations/cards/map', map_url: map.url('https')
   end
 
+  def interest_button(message)
+    render 'recommendations/cards/interest_button', message: message
+  end
+
 end
