@@ -1,7 +1,7 @@
 class RecommendationsController < ApplicationController
   layout 'recommendations'
   def show
-    @member = Member.find_by_uuid(params[:id])
-    render @member.uuid
+    @member_id = params[:id]
+    render @member_id
   end
 end
