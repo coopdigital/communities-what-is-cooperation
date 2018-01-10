@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :recommendations, only: :show
+  resources :recommendations_test, only: :show
 
   namespace :admin do
     root to: redirect('admin/members')
