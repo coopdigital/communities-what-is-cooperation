@@ -1,0 +1,99 @@
+<%= intro my_name: 'Helen', avatar: 'helen.png' do %>
+  <p>Hi Neil, I’ve had a go at finding some things for you to do near LS11. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area. Helen</p>
+<% end %>
+
+<%= recommendation id: 'beeston-Local-history-society', why: 'You said you’re interested in local history' do %>
+    <h1><span>Are you interested in going to a talk on ‘Chapel Allerton – Then &amp; Now’?</span> - Beeston Local History Society meet monthly at Beeston Parish Centre near you. Next month they are hosting this talk by Mike Betteridge.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Beeston Local History Society</dt>
+        <dd>Meet at Beeston Parish Centre</dd>
+        <dd>The second Tuesday of each month from 8pm to 9pm</dd>
+        <dd>No cost</dd>
+        <dd>Add it to your calendar using the links on <a href="http://www.southleedslife.com/event/beeston-local-history-society-5/" target="_blank">this events listing</a> or phone them on 0113 226 3379 to find out more</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.772717, longitude: -1.5688707) %>
+      <dl>
+        <dd>18 minutes walk</dd>
+        <dd class="availability">Next session: Tuesday 13 February at 8pm</dd>
+      </dl>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'so-choir-singing-group', why: 'You said you’d like to sing' do %>
+  <h1><span>How about joining a social singing group</span> - So Choir Leeds is a fun, informal singing group for everyone. You don’t need to have an audition and won’t be asked to do a scary solo, it’s just an opportunity for people who love to sing to get together and sing pop and rock hits. Does this sound like something you’d like? It is a little bit further than you said you’d like to travel but I think it sounds like great fun.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>So Choir! Leeds</dt>
+        <dd>Meet at Northern Monk Brewery Co.</dd>
+        <dd>Wednesdays from 7:45pm to 9:45pm but you can arrive early for food, drink and chats if you’d like to</dd>
+        <dd>£7 per session</dd>
+        <dd>Sign up on their <a href="https://www.meetup.com/so-choir" target="_blank">meetup page</a></dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.790771, longitude: -1.5563977) %>
+      <dl>
+        <dd>32 minutes walk</dd>
+        <dd class="availability">Next session: Today! 10 January, they are singing ‘Mr Brightside’ by the Killers</dd>
+      </dl>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'leeds-savage-club', why: 'You said you’d like to learn creative writing skills' do %>
+  <h1><span>Would you like to meet up with other writers?</span>  The Leeds Savage Club meet every other Wednesday to write and review short pieces together with an optional theme to help you get started should you need it. All styles of writing and levels of experience are welcome and they meet in a great pub so it’s a night out too.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Leeds Savage Club</dt>
+        <dd>Meet at the Pack Horse Inn</dd>
+        <dd>Every other Wednesday at 7pm</dd>
+        <dd>No cost</dd>
+        <dd>Sign up on their <a href="https://www.meetup.com/The-Leeds-Savage-Club/" target="_blank">meetup page</a></dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.7849268, longitude: -1.565354) %>
+      <dl>
+        <dd>42 minutes walk or 20 minutes on the bus</dd>
+        <dd class="availability">Next session: 17 January, the topic is ‘the coming dark’, bring your pen and paper</dd>
+      </dl>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'set-up-a-seed-circle', why: 'You said you’d like to start a seed library' do %>
+  <h1><span>What about setting up a seed circle with other keen gardeners in LS11.</span> There aren’t any seed swaps or libraries in your area at the moment but the Real Seed Collection have come up with the idea of <a href="http://www.realseeds.co.uk/seedcircle.html" target="_blank">seed circles</a> and it’s fairly simple to set one up.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Here’s what’s involved:</dt>
+        <dd><ol>
+              <li>Find a group of friends or neighbours who like gardening or growing fruit and vegetables, four other people would be a good number to start with</li>
+              <li>Agree which seeds each of you will save</li>
+              <li>Sow and grow your plants as normal but at the end of the season save, clean, dry and pack up your seeds</li>
+              <li>Get together and swap your seeds ready for the following year’s planting (maybe over a nice cup of tea)</li>
+        </ol></dd>
+      </dl>
+    </header>
+  </section>
+<% end %>
+
+<%= recommendation id: 'walk-a-neighbours-dog', why: 'You said you’d like to walk a neighbour’s dog' do %>
+  <h1><span>Do you want to find a neighbour’s dog to walk?</span> Borrow My Doggy is a website where people with dogs get matched with people who can help walk them!</h1>
+  <p class="expanded-intro">I’ve had a look, there are plenty of dogs on there near where you live. You’ll have to register on their website to see what’s available and to start getting matched with a dog. You can do this for free with basic membership and upgrade if you find dogs that you want to walk</p>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dd>£12.99 per year for full membership</dd>
+        <dd>Register on <a href="https://www.borrowmydoggy.com/" target="_blank">Borrow My Doggy</a></dd>
+      </dl>
+    </header>
+  </section>
+<% end %>
