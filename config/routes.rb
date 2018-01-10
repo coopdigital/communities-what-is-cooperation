@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resource :postcode, only: [:show, :update], controller: :postcode
   end
 
+  resources :recommendations, only: :show
+
   namespace :admin do
     root to: redirect('admin/members')
     resources :members, only: [:index, :create, :show]
