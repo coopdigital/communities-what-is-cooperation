@@ -252,3 +252,197 @@ body.activities {
     background-color: $saleerror-red;
   }
 }
+
+/// Recommendations
+
+body.recommendations-page {
+  .content-wrapper > header {
+    a.coop-logo, a.coop-logo-large {
+      @media (min-width: 750px) {
+        margin: 0 auto;
+        float: none;
+      }
+    }
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  .large-7 {
+    width: 100%;
+  }
+
+  .helper-text {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: $coop-grey;
+  }
+
+  .info-warning {
+    font-family:"AvenirNextLTW01-Medium";
+    color: $info-orange;
+  }
+
+  .btn {
+    margin: 1rem 0 0.4rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    @media (min-width: 750px) {
+      font-size: 1rem;
+    }
+  }
+
+  background: $offwhite;
+  header {
+    border-bottom: none;
+  }
+  article.recommendation {
+    background: $white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    max-width: 480px;
+    @media (min-width: 750px) {
+      margin: 0 auto 1rem auto;
+      padding: 2rem 2rem 1rem 2rem;
+      max-width: 520px;
+    }
+    h1 {
+      font-size: 1rem;
+      font-family:"AvenirNextLTW01-Medium";
+      @media (min-width: 750px) {
+        font-size: 1.4rem;
+      }
+      span {
+        font-family: 'AvenirNextLTW01-Demi';
+        &.bonus {
+          color: $button-green;
+        }
+      }
+    }
+    h2 {
+      font-size: 1rem;
+      font-family:"AvenirNextLTW01-Medium";
+      @media (min-width: 750px) {
+        font-size: 1.2rem;
+      }
+    }
+    p.expanded-intro {
+      margin-bottom: 1.8rem;
+      @media (min-width: 750px) {
+        margin-bottom: 2.8rem;
+      }
+    }
+    section {
+      &.recommendation-details {
+        header {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.8rem;
+          margin-bottom: 1rem;
+          img, .date {
+            width: 48px;
+            height: 48px;
+          }
+          img {
+            border-radius: 100%;
+          }
+          .date {
+            background: $base-meteorite;
+            border-radius: 0.2rem;
+            position: relative;
+            span {
+              color: $white;
+              width: 100%;
+              display: inline-block;
+              text-align: center;
+              &:nth-of-type(1) {
+                font-family: 'AvenirNextLTW01-Demi';
+                font-size: 1.2rem;
+                position: absolute;
+                top: 0;
+                height: 26px;
+                line-height: 1.8;
+              }
+              &:nth-of-type(2) {
+                text-transform: uppercase;
+                font-size: 0.6rem;
+                letter-spacing: 1px;
+                position: absolute;
+                bottom : 0;
+                height: 22px;
+                line-height: 1.6;
+              }
+            }
+          }
+          dl {
+            margin: 0;
+            padding: 0;
+            width: calc(100% - (48px + 1rem));
+            dt, dd {
+              margin: 0;
+              line-height: 1.6;
+            }
+            dt {
+              font-size: 1rem;
+              line-height: 1.4;
+              font-family:"AvenirNextLTW01-Medium";
+            }
+          }
+        }
+        div.location-details {
+          border-radius: 0.4rem;
+          border: 1px solid $offwhite;
+          margin-bottom: 1rem;
+          overflow: hidden;
+          div.map {
+            width: 100%;
+            height: 8rem;
+            background: green;
+          }
+          dl {
+            font-size: 0.8rem;
+            padding: 0 1rem;
+            dt, dd {
+              margin: 0;
+              padding: 0;
+              &.availability {
+                font-family:"AvenirNextLTW01-Medium";
+                color: $button-green;
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding: 0.8rem 0 0 0;
+      border-top: $light-grey 1px solid;
+      p, a {
+        @extend .helper-text;
+        padding: 0;
+        margin: 0;
+      }
+      p {
+        width: 50%;
+      }
+      a {
+        border-bottom-color: $mid-grey;
+        align-self: flex-start;
+      }
+    }
+  }
+  p.copyright {
+    text-align: center;
+  }
+}
+
+p.copyright {
+  font-size: 0.8rem;
+}
