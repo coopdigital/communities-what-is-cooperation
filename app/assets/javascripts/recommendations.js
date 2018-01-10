@@ -23,8 +23,14 @@ $(document).ready(function(){
 
   $('.recommendations-page a.not_for_me').click(function(event){
     logClickEvent('This isn\'t for me', event);
-    // TODO: UI feedback
-    return false;
+
+    var link = $(event.target);
+    var recommendation = link.parents('article.recommendation').first();
+
+    recommendation.find(".front").hide();
+    recommendation.find(".back").show();
+
+    return(false);
   });
 
   $('.recommendations-page a.interest').click(function(event){
