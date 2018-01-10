@@ -265,6 +265,10 @@ body.recommendations-page {
     }
   }
 
+  .back {
+    display: none;
+  }
+
   section {
     &.recommendation-page-intro {
       @extend .central-layout;
