@@ -67,21 +67,27 @@
 <% end %>
 
 <%= recommendation id: 'learn-social-media', why: 'You said you’d like to learn how to use social media' do %>
-  <h1><span>How about learning to use Social Media?</span>There are free IT learning sessions taking place at Horsforth Community Hub that could help.</h1>
+  <h1><span>How about learning to use social media?</span>There are free IT learning sessions taking place at Horsforth Community Hub that could help.</h1>
   <section class="recommendation-details">
     <header>
       <dl>
         <dt>Horsforth Community Hub</dt>
-        <dd>Open every day</dd>
+        <dd class="availability">Open every day</dd>
         <dd>No cost</dd>
-        <dd>For further details: phone 0113 378 1872</dd>
       </dl>
     </header>
     <div class="location-details">
       <%= map(latitude: 53.8399165, longitude: -1.6399358) %>
       <dl>
-        <dd>3 minutes walk</dd>
+        <dd>Town Street, Horsforth, Leeds​, LS18 5BL</dd>
+        <dd>3 minutes walk <a href="#" target="_blank">Get directions</a> </dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      Phone <a href="tel:01133781872" target="_blank">0113 378 1872</a>
     </div>
   </section>
 <% end %>
