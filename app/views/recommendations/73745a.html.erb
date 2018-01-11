@@ -1,15 +1,19 @@
 <%= intro my_name: 'Sophy', avatar: 'sophy.png' do %>
-  <p>Hi Julie, Sophy here. I’ve had a go at finding some things for you to do near LS14. If I’ve got something wrong or you want me to find something else then let me know.</p>
+  <p>Hi Julie, Sophy here. I’ve found some things for you to do near LS14. If I’ve got something wrong or you want me to find something else then let me know.</p>
 <% end %>
 
 <%= recommendation id: 'getting-fit-roundhay-park', why: 'You said you’d like to go to an exercise class' do %>
   <h1><span>What about getting fit in Roundhay Park</span> - I found some bootcamp outdoor sessions - is this right for you? You don’t have to be super fit to take part and every class is different. I’ve done bootcamp fitness before - it is quite hard work but you do feel great afterwards.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>16</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>UK Outdoor Fitness Group</dt>
         <dd>£7 per session</dd>
-        <dd>Sign up here: <a href="https://ukoutdoorfitness.com/venue/roundhay-park/" target="_blank">https://ukoutdoorfitness.com/venue/roundhay-park/</a></dd>
+        <dd class="availability">Next session: Tuesday 16 January 9.30am</dd>
       </dl>
     </header>
     <div class="location-details">
@@ -18,10 +22,16 @@
         <dd>Roundhay Park, Mansion Ln, Leeds LS8 2HH</dd>
         <dd>35 minutes walk <a href="https://www.google.co.uk/maps/dir//Roundhay+Park,+Mansion+Ln,+Leeds+LS8+2HH/@53.82939,-1.5759173,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795b0b0acc019f:0x58de428758fe0d6e!2m2!1d-1.5058778!2d53.8294104!3e2" target="_blank">Get directions</a></dd>
         <dd>Meet at the main car park nearest Roundhay Fox on Street Lane / Princes Avenue</dd>
-        <dd class="availability">Next session: Tuesday 16 January 9.30am</dd>
       </dl>
     </div>
   </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Sign up</h2>
+      <a href="https://ukoutdoorfitness.com/venue/roundhay-park/" target="_blank">ukoutdoorfitness.com/venue/roundhay-park/</a>
+    </div>
+  </section>
+
   <div class="other-people">
     <img src="<%= image_path 'anonymous.svg' %>" alt="">
   </div>
@@ -40,10 +50,17 @@
     <header>
       <img src="<%= image_path 'leeds-city-council.png' %>" alt="">
       <dl>
-        <dd>The first step is to call Gary Pritchard on 0113 3787506</dd>
-        <dd>Find out more: <a href="http://www.leeds.gov.uk/Business/Pages/Street-Parties.aspx" target="_blank">http://www.leeds.gov.uk/Business/Pages/Street-Parties.aspx</a></dd>
+        <dt>Gary Pritchard</dt>
+        <dd>Senior Highways Engineer</dd>
+        <dd><a href="tel:0113 3787506" target="_blank">0113 3787506</a></dd>
       </dl>
     </header>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      <a href="http://www.leeds.gov.uk/Business/Pages/Street-Parties.aspx" target="_blank">leeds.gov.uk/Business/Pages/Street-Parties</a>
+    </div>
   </section>
 <% end %>
 
@@ -51,11 +68,14 @@
   <h1><span>Discover your passion for music.</span> I found a music school fairly close to you (a bit further than you said you’d like to travel). They offer teaching for a range of instruments in individual classes and group sessions for all abilities.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>20</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>East Leeds Music Centre</dt>
-        <dd>Saturdays (term time only), 9am - 12.30pm</dd>
+        <dd class="availability">Next class: Saturday 20 January</dd>
         <dd>£12.50 a month</dd>
-        <dd>Choose a class and sign up: <a href="http://artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/east-leeds-music-centre/" target="_blank">http://artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/east-leeds-music-centre/</a></dd>
       </dl>
     </header>
     <div class="location-details">
@@ -63,24 +83,34 @@
       <dl>
         <dd>John Smeaton Academy, Smeaton Approach, Barwick Road, Manston, Leeds, LS15 8TA</dd>
         <dd>30 minutes by bus and walking <a href="https://www.google.co.uk/maps/dir//John+Smeaton+Academy,+Smeaton+Approach,+Barwick+Rd,+Leeds+LS15+8TA/@53.8152983,-1.504758,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x487943578dca29e5:0x4d8bd3e09a500668!2m2!1d-1.4347189!2d53.8153187!3e2" target="_blank">Get directions</a> </dd>
-        <dd class="availability">Next class: Saturday 20 January</dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Choose a class and sign up</h2>
+      <a href="http://artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/east-leeds-music-centre/" target="_blank">artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/east-leeds-music-centre/</a>
     </div>
   </section>
 <% end %>
 
 
 <%= recommendation id: 'leeds-repair-cafe', why: 'You said you’d like to learn to fix my broken phone' do %>
-  <h1><span>Don’t replace - repair!</span> Get broken stuff mended and learn how to repair things yourself at a Repair Cafe. Join the Facebook group to find out when the next cafe is and get help starting your own event. You’d be amazed what can be saved from the dump.</h1>
+  <h1><span>Don’t replace - repair!</span> Get broken stuff mended and learn how to repair things yourself at a Repair Cafe. You’d be amazed what can be saved from the dump.</h1>
   <section class="recommendation-details">
     <header>
+      <img src="<%= image_path 'leeds-repair-cafe.png' %>" alt="">
       <dl>
         <dt>Leeds Repair Cafe</dt>
-        <dd>See Facebook page for next event near you</dd>
         <dd>No cost</dd>
-        <dd>Join the group: <a href="https://www.facebook.com/groups/252645815067316/" target="_blank">https://www.facebook.com/groups/252645815067316/</a></dd>
       </dl>
     </header>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Join their Facebook group for updates</h2>
+      <a href="https://www.facebook.com/groups/252645815067316/" target="_blank">facebook.com/groups/252645815067316</a>
+    </div>
   </section>
 <% end %>
 
@@ -90,7 +120,6 @@
     <header>
       <dl>
         <dt>LS14 Trust</dt>
-        <dd>Contact: <a href="mailto:info@ls14trust.org" target="_blank">info@ls14trust.org</a></dd>
       </dl>
     </header>
     <div class="location-details">
@@ -98,5 +127,11 @@
       <dl>
         <dd>45 Ramshead Hill, Leeds LS14 1BT</dd>
       </dl>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Start a conversation</h2>
+      <a href="mailto:info@ls14trust.org" target="_blank">info@ls14trust.org</a>
+    </div>
   </section>
 <% end %>
