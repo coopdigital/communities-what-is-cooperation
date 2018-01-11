@@ -23,7 +23,7 @@
       <img src="<%= image_path 'appletree.png' %>" alt="">
       <dl>
         <dt>Appletree Allotment and Community Garden</dt>
-        <dd>Find out more: <a target="_blank" href="http://www.wakefield.gov.uk/sport-and-leisure/wakefield-wellbeing/appletree" target="_blank">wakefield.gov.uk</a></dd>
+        <dd class="availability">Next open: Tomorrow 10am - 4pm</dd>
       </dl>
     </header>
     <div class="location-details">
@@ -33,9 +33,18 @@
       <dl>
         <dt>Off Agbrigg Road, Wakefild, WF1 5AE</dt>
         <dd>Around 12 minute drive <a target="_blank" href="https://www.google.com/maps?ll=53.695692,-1.520273&z=12&t=m&hl=en-GB&gl=US&mapclient=embed&saddr=WF3+1ER,+Nook+Green,+Tingley,+Wakefield&daddr=41-67+Agbrigg+Rd,+Wakefield+WF1&dirflg=d" target="_blank">Get directions</a></dd>
-        <dd class="availability">Next open: Tomorrow 10am - 4pm</dd>
       </dl>
     </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        <a target="_blank" href="http://www.wakefield.gov.uk/sport-and-leisure/wakefield-wellbeing/appletree" target="_blank">wakefield.gov.uk</a>
+      </div>
+      <div class="action">
+        <h2>Find out more</h2>
+        <a target="_blank" href="http://www.wakefield.gov.uk/sport-and-leisure/wakefield-wellbeing/appletree" target="_blank">wakefield.gov.uk</a>
+      </div>
+    </section>
   </section>
 <% end %>
 
@@ -131,4 +140,12 @@
       </dl>
     </header>
   </section>
+<% end %>
+
+<%= recommendation id: 'start-hiking-group', why: "You said you'd like to go hiking", back_content: "Thanks for letting me know, I'll be in touch." do %>
+  <h1><span>🎉 Want something a bit more challenging?</span> You said you’re up for going hiking, but I can’t find a hiking group near where you live. Would you like to start one?</h1>
+  <section class="recommendation-details">
+    <%= want_to_start %>
+  </section>
+  <p class="expanded-intro">I can see if I can find other people in your neighbourhood who want to go for a hike.</p>
 <% end %>
