@@ -29,4 +29,8 @@ module RecommendationsHelper
     render 'recommendations/cards/interest_button', message: message
   end
 
+  def want_to_start(arguments={}, &blk)
+    render 'recommendations/cards/want_to_start'
+  end
+
 end

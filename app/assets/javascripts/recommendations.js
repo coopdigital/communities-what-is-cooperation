@@ -40,6 +40,20 @@ $(document).ready(function(){
     return false;
   });
 
+  $('.recommendations-page a.yes').click(function(event){
+    logClickEvent(event, 'want_to_start', 'yes');
+    // TODO: UI feedback
+    alert('Coming soon!');
+    return false;
+  });
+
+  $('.recommendations-page a.no').click(function(event){
+    logClickEvent(event, 'want_to_start', 'no');
+    // TODO: UI feedback
+    alert('Coming soon!');
+    return false;
+  });
+
   var hit_recommendations = [];
   var waypoints = $('article.recommendation').waypoint({
     handler: function(direction) {

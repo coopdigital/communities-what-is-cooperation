@@ -438,6 +438,16 @@ body.recommendations-page {
             }
           }
         }
+        ul.yes-no {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li {
+            display: inline;
+            margin-right: 1em;
+          }
+          margin-bottom: 1em;
+        }
         div.location-details {
           border-radius: 0.4rem;
           border: 1px solid $offwhite;

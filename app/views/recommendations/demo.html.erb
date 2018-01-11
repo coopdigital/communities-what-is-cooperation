@@ -141,3 +141,11 @@
     </header>
   </section>
 <% end %>
+
+<%= recommendation id: 'start-hiking-group', why: "You said you'd like to go hiking" do %>
+  <h1><span>🎉 Want something a bit more challenging?</span> You said you’re up for going hiking, but I can’t find a hiking group near where you live. Would you like to start one?</h1>
+  <section class="recommendation-details">
+    <%= want_to_start %>
+  </section>
+  <p class="expanded-intro">I can see if I can find other people in your neighbourhood who want to go for a hike.</p>
+<% end %>
