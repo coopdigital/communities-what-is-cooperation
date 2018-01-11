@@ -1,0 +1,62 @@
+<%= intro my_name: 'Ian', avatar: 'ian.png' do %>
+  <p>Hi Kathryn, I’ve found some things for you near WF15. That sewing course is only 25 minutes walk! You could be repairing clothes in no time! What do you think?</p>
+<% end %>
+
+<%= recommendation id: 'sewing-fabricate', why: 'You said you’d like to repair your clothes' do %>
+  <h1><span>Learn how to repair your clothes in Roberttown</span>. I’ve found a local shop that puts on beginners sewing courses. ✂️👗 You could be repairing clothes in no time!
+  </h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Upcoming classes in January and February:</dt>
+        <dd>Wed 10th and 17th: 6-9pm</dd>
+        <dd>Sat 13th: 10am - 4pm</dd>
+        <dd>Wed 21st and 28th: 6-9pm</dd>
+        <dd>Fri 2nd and 9th: 6-9pm</dd>
+        <dd><a href="https://fabricateshop.co.uk/collections/workshops/products/beginners-sewing-workshop?variant=48598460103" target="_blank">Sign up here</a></dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.6997636, longitude: -1.7066422) %>
+      <dl>
+        <dd>Fabricate Roberttown, 164A Roberttown Lane, Liversedge, WF15 7LT</dd>
+        <dd>25 minutes walk <a href="https://www.google.co.uk/maps/dir//Fabricate+Roberttown,+164A+Roberttown+Ln,+Liversedge+WF15+7LT/@53.7008982,-1.7467035,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x487bde4b22d1561d:0x3d9ab0b5aab8b880!2m2!1d-1.7044535!2d53.6997604!3e2" target="_blank">Get directions</a></dd>
+        <dd>£60 a course</dd>
+        <dd class="availability">Next course: Saturday 13th January, 10am - 4pm</dd>
+      </dl>
+    </div>
+    <p>They also organise Sewcials, where for £5 you can use all their machines and have unlimited tea and coffee if that’s more your thing?</p>
+  </section>
+<% end %>
+
+<%= recommendation id: 'riding-ravensthorpe', why: 'You said you’d like to go cycling' do %>
+  <h1><span>Fancy going riding with Ravensthorpe Cycling Club?</span> They sound like a friendly club! 🚴🚴🚴 The shorter Saturday ride is about 30 miles out and back.</h1>
+  <p class="expanded-intro">I think this would be a great way to meet other people and ride at a leisurely pace.</p>
+  <section class="recommendation-details">
+    <div class="location-details">
+      <%= map(latitude: 53.6805182, longitude: -1.7170707) %>
+      <dl>
+        <dd>Wood Lane is about a 20 minute ride downhill from your home.</dd>
+        <dd><a href="https://www.google.co.uk/maps/dir//Wood+Ln,+Mirfield+WF14+0EF/@53.6807934,-1.7303784,14z/data=!4m9!4m8!1m0!1m5!1m1!1s0x487bdef7f6741a19:0xcc6dd34235053a0a!2m2!1d-1.7150625!2d53.6803088!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+      <dl>
+        <dd>It's free to attend</dd>
+        <dd>You might want to <a href="https://www.facebook.com/rccclubclothing/">introduce yourself on their Facebook page</a></dd>
+        <dd class="availability">Next ride: Saturday 13 January 9am</dd>
+      </dl>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'walk-a-neighbours-dog', why: 'You said you’d like to walk a neighbour’s dog' do %>
+  <h1><span>Do you want to find a neighbour’s dog to walk?</span> Borrow My Doggy is a website where people with dogs get matched with people who can help walk them!</h1>
+  <p class="expanded-intro">I’ve had a look, there are plenty of dogs on there near where you live. 🐶&nbsp;&nbsp;You’ll have to register on their website to see what’s available and to start getting matched with a dog. You can do this for free with basic membership and upgrade if you find dogs that you want to walk</p>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dd>£12.99 per year for full membership</dd>
+        <dd>Register on <a href="https://www.borrowmydoggy.com/" target="_blank">Borrow My Doggy</a></dd>
+      </dl>
+    </header>
+  </section>
+<% end %>
