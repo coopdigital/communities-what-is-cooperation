@@ -48,11 +48,14 @@
   <h1><span>Discover your passion for music.</span> I found a music school fairly close to you. They offer teaching for a range of instruments in individual classes and group sessions for all abilities.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>13</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>North Leeds Music Centre</dt>
-        <dd>Saturdays (term time only), 9am - 12.30pm</dd>
         <dd>£12.50 per lesson</dd>
-        <dd>Choose a class and sign up: <a href="http://artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/north-leeds-music-centre/" target="_blank">artformsleeds.co.uk</a></dd>
+        <dd class="availability">Next class: Saturday 13 January</dd>
       </dl>
     </header>
     <div class="location-details">
@@ -60,9 +63,14 @@
       <dl>
         <dd>Allerton C of E Primary School, Lingfield Approach, Alwoodley, Leeds, LS17 7HL</dd>
         <dd>22 minutes by bus from home <a href="https://www.google.co.uk/maps/dir//Lingfield+Approach,+Leeds+LS17+7HL/@53.8488396,-1.5493223,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795bd0d7181ee9:0x4c792fde0f9feceb!2m2!1d-1.5471336!2d53.8488396!3e3?dcr=0" target="_blank">Get directions</a> </dd>
-        <dd class="availability">Next class: Saturday 13 January</dd>
       </dl>
     </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Choose a class and sign up</h2>
+        <a href="https://ukoutdoorfitness.com/venue/roundhay-park/" target="_blank">ukoutdoorfitness.com/venue/roundhay-park/</a>
+      </div>
+    </section>
   </section>
 <% end %>
 
@@ -70,11 +78,14 @@
   <h1><span>Would you like to meet up with other writers?</span> The Leeds Savage Club meet every other Wednesday to write short pieces together. All styles of writing and levels of experience are welcome.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>17</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>Leeds Savage Club</dt>
-        <dd>Every other Wednesday at 7pm</dd>
-        <dd>Free</dd>
-        <dd>Sign up on their meetup page: <a href="https://www.meetup.com/The-Leeds-Savage-Club/" target="_blank">www.meetup.com/The-Leeds-Savage-Club</a></dd>
+        <dd>Free!</dd>
+        <dd class="availability">Next meetup: 17 January</dd>
       </dl>
     </header>
     <div class="location-details">
@@ -82,30 +93,44 @@
       <dl>
         <dd>Meet at the Pack Horse Inn, Pack Horse Yard, Leeds LS1 6AT</dd>
         <dd>21 minutes by bus from home <a href="https://www.google.co.uk/maps/dir//Leeds+LS1+6AT/@53.7975555,-1.5449557,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795c1bd8a0ab19:0x28693090f9cb56b0!2m2!1d-1.542767!2d53.7975555!3e3?dcr=0" target="_blank">Get directions</a> </dd>
-        <dd class="availability">Next meetup: 17 January</dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Sign up on their meetup page</h2>
+      <a href="https://www.meetup.com/The-Leeds-Savage-Club/" target="_blank">www.meetup.com/The-Leeds-Savage-Club</a>
     </div>
   </section>
 <% end %>
 
 <%= recommendation id: 'seven-arts', why: 'You said you’d like to go to a concert' do %>
-  <h1><span>Fancy some afternoon jazz?</span> I found a concert that is happening near you this Sunday afternoon. I don’t know the artist but it looks really good - he’s played with James Brown!</h1>
+  <h1><span>Fancy some afternoon jazz?</span> 🎷 I found a concert that is happening near you this Sunday afternoon. I don’t know the artist but it looks really good - he’s played with James Brown!</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>14</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>JazzLeeds – Piero Tucci’s Canadian Quartet</dt>
-        <dd>Sunday 14 January 1.30 - 4pm</dd>
         <dd>£10</dd>
-        <dd>Book tickets: <a href="http://www.sevenleeds.co.uk/event/jazzleeds-piero-tuccis-canadian-quartet/" target="_blank">www.sevenleeds.co.uk</a></dd>
+        <dd class="availability">Date and time: Sunday 14 January 1.30 - 4pm</dd>
       </dl>
     </header>
+
     <div class="location-details">
       <%= map(latitude: 53.827912, longitude: -1.537372) %>
       <dl>
         <dd>Seven Arts, 31A Harrogate Rd, Leeds LS7 3PD</dd>
         <dd>7 minutes walk from home <a href="https://www.google.co.uk/maps/dir//Harrogate+Road,+Leeds+LS7+3PD/@53.8280052,-1.5398235,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795bef0e1e5661:0x5a3cfb0e2719815e!2m2!1d-1.5376348!2d53.8280052!3e2?dcr=0" target="_blank">Get directions</a> </dd>
-        <dd class="availability">Date and time: Sunday 14 January 1.30 - 4pm</dd>
       </dl>
     </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Book tickets</h2>
+        <a href="http://www.sevenleeds.co.uk/event/jazzleeds-piero-tuccis-canadian-quartet/" target="_blank">www.sevenleeds.co.uk</a>
+      </div>
+    </section>
   </section>
 <% end %>
