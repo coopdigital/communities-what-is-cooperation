@@ -265,6 +265,10 @@ body.recommendations-page {
     }
   }
 
+  .back {
+    display: none;
+  }
+
   section {
     &.recommendation-page-intro {
       @extend .central-layout;
@@ -326,7 +330,7 @@ body.recommendations-page {
     margin: 1rem 0 0.4rem;
   }
 
-  p {
+  p, ol li, ul li {
     font-size: 0.8rem;
     @media (min-width: 750px) {
       font-size: 1rem;
@@ -433,8 +437,7 @@ body.recommendations-page {
           overflow: hidden;
           div.map {
             width: 100%;
-            height: 8rem;
-            background: green;
+            font-size: 0;
           }
           dl {
             font-size: 0.8rem;
