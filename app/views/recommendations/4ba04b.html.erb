@@ -1,5 +1,5 @@
 <%= intro my_name: 'Sophy', avatar: 'sophy.png' do %>
-  <p>Hi Marie, Sophy here. I’ve had a go at finding some things for you to do near LS15. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
+  <p>Hi Marie, Sophy here. I’ve found some things for you to do near LS15. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
 <% end %>
 
 <%= recommendation id: 'revive-leeds', why: 'You said you’d like to learn how to repair your bike' do %>
@@ -61,12 +61,14 @@
   <h1><span>Would you like to explore the countryside?</span> I found a walking group that does circular walks between 4 and 7 miles. Again - it’s a bit further than you said you’d like to go - an extra incentive to get your bike on the road perhaps?</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>27</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>Oakwood Church Walking Group</dt>
-        <dd>Last Saturday of the month, departs 9.30am</dd>
+        <dd class="availability">Next walk: Saturday 27 January 9.30am</dd>
         <dd>Free to join</dd>
-        <dd>Get the route of the next walk: <a href="http://www.oakwoodchurch.info/walking.html" target="_blank">www.oakwoodchurch.info</a>
-</a></dd>
       </dl>
     </header>
     <div class="location-details">
@@ -74,8 +76,13 @@
       <dl>
         <dd>Meet at Oakwood Church, Springwood Road, Oakwood, Leeds, LS8 2QA</dd>
         <dd>24 minutes bike ride from home <a href="https://www.google.co.uk/maps/dir//Springwood+Road,+Leeds+LS8+2QA/@53.8277979,-1.5015857,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795b77cb828195:0x3cb791686ba77189!2m2!1d-1.499397!2d53.8277979!3e2?dcr=0" target="_blank">Get directions</a> </dd>
-        <dd class="availability">Next walk: Saturday 27 January 9.30am (make sure you get there a bit earlier)</dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Get the route of the next walk</h2>
+      <a href="http://www.oakwoodchurch.info/walking.html" target="_blank">oakwoodchurch.info</a>
     </div>
   </section>
 <% end %>
