@@ -39,7 +39,7 @@ $(document).ready(function(){
 
   $('.recommendations-page a.interest').click(function(event){
     logClickEvent(event, 'interest');
-    // TODO: UI feedback
+    switchToBackContent(event);
     return false;
   });
 
