@@ -37,22 +37,31 @@
 <% end %>
 
 <%= recommendation id: 'take-a-hike', why: 'You said you’d like to go hiking' do %>
-  <h1><span>Take a hike?</span> - Join the Leeds Group Ramblers and get involved in a regular programme of walks and hikes in and around your area.</h1>
+  <h1><span>Take a hike?</span> Join the Leeds Group Ramblers and get involved in a regular programme of walks and hikes in and around your area.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>13</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>Leeds Group Ramblers</dt>
-        <dd>Every Saturday</dd>
+        <dd class="availability">Next walk: Saturday 13 January at 10:30am</dd>
         <dd>No cost - just turn up at the start point</dd>
-        <dd>Here are the details for their next <a href="http://www.ramblers.org.uk/go-walking/find-a-walk-or-route/walk-detail.aspx?walkID=3923908" target="_blank">walk</a></dd>
       </dl>
     </header>
     <div class="location-details">
       <%= map(latitude: 53.790771, longitude: -1.5563977) %>
       <dl>
-        <dd>This is a 30 minutes car journey from you. If this is too far, visit <a href="http://www.leedsramblers.org.uk/" target="_blank">the Leeds Ramblers website</a> for a list of planned future walks which may have closer start points.</dd>
-        <dd class="availability">Next walk: Saturday 13 January at 10:30am, Scholes &amp; Barnbow</dd>
+        <dd>Meet at the Maypole on Main Street Barwick in Elmet</dd>
+        <dd>30 minutes car journey <a href="https://www.google.co.uk/maps/dir//53.790771,-1.5563977/@53.7907174,-1.5560245,16z/data=!4m2!4m1!3e0" target="_blank">Get directions</a> </dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      <a href="http://www.ramblers.org.uk/go-walking/find-a-walk-or-route/walk-detail.aspx?walkID=3923908" target="_blank">ramblers.org.uk/go-walking/find-a-walk-or-route/walk-detail</a>
     </div>
   </section>
 <% end %>
