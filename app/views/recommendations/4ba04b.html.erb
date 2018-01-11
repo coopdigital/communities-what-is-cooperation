@@ -1,0 +1,95 @@
+<%= intro my_name: 'Sophy', avatar: 'sophy.png' do %>
+  <p>Hi Marie, Sophy here. I’ve found some things for you to do near LS15. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
+<% end %>
+
+<%= recommendation id: 'revive-leeds', why: 'You said you’d like to learn how to repair your bike' do %>
+  <h1><span>Get to grips with gears and brakes</span> - when you volunteer at Revive Leeds, you can apply for a free course in Bicycle Maintenance 🚲🔧. (It’s a bit further than you said you’d like to walk.) Revive is a recycling centre in East Leeds, and they need people to fix the bikes that get donated.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'revive-leeds.png' %>" alt="">
+      <dl>
+        <dt>Revive Leeds (Seacroft)</dt>
+        <dd>£7 per session</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8272367, longitude: -1.4647835) %>
+      <dl>
+        <dd>East Leeds Household Waste Site, Limewood Road, LS14 1LU</dd>
+        <dd>44 minutes walk <a href="https://www.google.co.uk/maps/dir//Limewood+Rd,+Leeds+LS14+1LU/@53.8272367,-1.4636891,18z/data=!4m17!1m7!3m6!1s0x48795b4560916023:0xbab06216b0fbc809!2sLimewood+Rd,+Leeds+LS14+1LU!3b1!8m2!3d53.8271398!4d-1.4615603!4m8!1m0!1m5!1m1!1s0x48795b4560916023:0xbab06216b0fbc809!2m2!1d-1.4615603!2d53.8271398!3e2?dcr=0" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Get in touch and volunteer</h2>
+        <a href="http://reviveleeds.co.uk/index.php" target="_blank">reviveleeds.co.uk</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'seacroft-wheelers', why: 'You said you’d like to go cycling' do %>
+  <h1><span>When your bike is back on the road</span> you might like to join a cycling club. I don’t know how experienced a rider you are - this club organises rides of 25-45 miles at around 12-14mph (and longer, faster ones if you're up for that).</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'seacroft-wheelers.png' %>" alt="">
+      <dl>
+        <dt>Seacroft Wheelers</dt>
+        <dd>Sundays, 9am Apr-Nov/9.30am Dec-Mar</dd>
+        <dd>£12.50 a year for membership</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.798457, longitude: -1.441362) %>
+      <dl>
+        <dd>Meet at the Skyliner Chip Shop, Colton Roundabout, Whitkirk, Leeds, LS15 8NN</dd>
+        <dd>15 minutes bike ride from home <a href="https://www.google.co.uk/maps/dir//Austhorpe+View,+Leeds+LS15+8NN/@53.7982567,-1.4431221,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4879434bf076e2b5:0x169b04d49cee6e43!2m2!1d-1.4409334!2d53.7982567!3e2?dcr=0" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Join up</h2>
+      <a href="https://www.seacroftwheelers.co.uk/join/" target="_blank">seacroftwheelers.co.uk</a>
+    </div>
+  </section>
+
+  </section>
+<% end %>
+
+<%= recommendation id: 'oakwood-walking', why: 'You said you’d like to go walking' do %>
+  <h1><span>Would you like to explore the countryside?</span> I found a walking group that does circular walks between 4 and 7 miles. Again - it’s a bit further than you said you’d like to go - an extra incentive to get your bike on the road perhaps?</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>27</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Oakwood Church Walking Group</dt>
+        <dd class="availability">Next walk: Saturday 27 January 9.30am</dd>
+        <dd>Free to join</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.830151, longitude: -1.499949) %>
+      <dl>
+        <dd>Meet at Oakwood Church, Springwood Road, Oakwood, Leeds, LS8 2QA</dd>
+        <dd>24 minutes bike ride from home <a href="https://www.google.co.uk/maps/dir//Springwood+Road,+Leeds+LS8+2QA/@53.8277979,-1.5015857,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795b77cb828195:0x3cb791686ba77189!2m2!1d-1.499397!2d53.8277979!3e2?dcr=0" target="_blank">Get directions</a> </dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Get the route of the next walk</h2>
+      <a href="http://www.oakwoodchurch.info/walking.html" target="_blank">oakwoodchurch.info</a>
+    </div>
+  </section>
+<% end %>
+<%= recommendation id: 'start-hiking-group', why: "You said you'd like to go hiking", back_content: "Thanks for letting me know, I'll be in touch." do %>
+  <h1><span>🎉 Want something a bit more challenging?</span> You said you’re up for going hiking, but I can’t find a hiking group near where you live. Would you like to start one?</h1>
+  <section class="recommendation-details">
+    <%= want_to_start %>
+  </section>
+  <p class="expanded-intro">I can see if I can find other people in your neighbourhood who want to go for a hike.</p>
+<% end %>
