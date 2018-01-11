@@ -24,6 +24,7 @@ $(document).ready(function(){
 
     recommendation.find(".front").hide();
     recommendation.find(".back").show();
+    recommendation.addClass('item-highlight');
   }
 
   $('.recommendations-page a[target=_blank]').click(function(event){
