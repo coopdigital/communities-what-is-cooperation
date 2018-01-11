@@ -456,16 +456,16 @@ body.recommendations-page {
             }
           }
         }
-        section.call-to-action {
-          margin: 2rem 0 0 1.6rem;
-          padding: 0 0 0 2rem;
-          border-left: 0.4rem solid $coop-grey;
-          div.action {
-            margin-bottom: 1rem;
-            h2 {
-              margin: 0;
-            }
-          }
+      }
+    }
+    section.call-to-action {
+      margin: 2rem 0 0 1.6rem;
+      padding: 0 0 0 2rem;
+      border-left: 0.4rem solid $coop-grey;
+      div.action {
+        margin-bottom: 1rem;
+        h2 {
+          margin: 0;
         }
       }
     }
