@@ -18,19 +18,21 @@ $(document).ready(function(){
     }
   }
 
+  function switchToBackContent(event){
+    var link = $(event.target);
+    var recommendation = link.parents('article.recommendation').first();
+
+    recommendation.find(".front").hide();
+    recommendation.find(".back").show();
+  }
+
   $('.recommendations-page a[target=_blank]').click(function(event){
     logClickEvent(event, 'click', event.target.href);
   });
 
   $('.recommendations-page a.not_for_me').click(function(event){
     logClickEvent(event, 'not_for_me');
-
-    var link = $(event.target);
-    var recommendation = link.parents('article.recommendation').first();
-
-    recommendation.find(".front").hide();
-    recommendation.find(".back").show();
-
+    switchToBackContent(event);
     return(false);
   });
 
@@ -42,15 +44,13 @@ $(document).ready(function(){
 
   $('.recommendations-page a.yes').click(function(event){
     logClickEvent(event, 'want_to_start', 'yes');
-    // TODO: UI feedback
-    alert('Coming soon!');
+    switchToBackContent(event);
     return false;
   });
 
   $('.recommendations-page a.no').click(function(event){
     logClickEvent(event, 'want_to_start', 'no');
-    // TODO: UI feedback
-    alert('Coming soon!');
+    switchToBackContent(event);
     return false;
   });
 

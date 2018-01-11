@@ -8,6 +8,7 @@ module RecommendationsHelper
   def recommendation(arguments={}, &blk)
     raise 'An ID must be provided for each recommendation so we can track clicks. This should be a short description of this particular recommendation. e.g. getting-fit-roundhay-park' if arguments[:id].blank?
     raise 'A reason must be provided for each recommendation' if arguments[:why].blank?
+    arguments[:back_content] ||= 'OK, noted! Your feedback is useful for when I’m finding things for you to do.'
     render 'recommendations/cards/recommendation', arguments.merge(content: capture(&blk))
   end
 
