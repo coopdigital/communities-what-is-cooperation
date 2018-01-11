@@ -6,60 +6,88 @@
     <h1><span>How about going for a run in Horsforth?</span> - Learn to enjoy running with this very friendly group. They are suitable for all abilities, ranging from a walk to a run. All of the runners are encouraged to go at their own pace and there is always a choice for those taking part to do a little more or a little less.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>16</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>Horsforth Harriers Beginners</dt>
-        <dd>Every Tuesday at 7pm</dd>
+        <dd class="availability">Next session: Tuesday 16 January at 7pm</dd>
         <dd>No cost</dd>
-        <dd>Find out more: Phone Hilary Wharam on 0113 2505673 or <a href="mailto:horsforthharriers@runleeds.co.uk">email</a></dd>
       </dl>
     </header>
     <div class="location-details">
       <%= map(latitude: 53.8471311, longitude: -1.6389087) %>
       <dl>
-        <dd>17 minutes walk</dd>
-        <dd class="availability">Next session: Tuesday 16 January at 7pm</dd>
+        <dd>King George's Playing Field, Brownberrie Lane, Horsforth, Leeds LS18 5SB</dd>
+        <dd>17 minutes walk <a href="https://www.google.co.uk/maps/dir//+King+George's+Playing+Field,+Brownberrie+Lane,+Horsforth,+Leeds+LS18+5SB/@53.8469272,-1.7065858,12z/data=!3m1!4b1!4m2!4m1!3e2" target="_blank">Get directions</a></dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Speak to Hilary Wharam</h2>
+      Call <a href="tel:01132505673">0113 2505673</a>
+    </div>
+    <div class="action">
+      <h2>Find out more</h2>
+      <a href="https://horsforthharriers.co.uk/absolute-beginners/" target="_blank">horsforthharriers.co.uk</a>
     </div>
   </section>
 <% end %>
 
 <%= recommendation id: 'take-a-hike', why: 'You said you’d like to go hiking' do %>
-  <h1><span>Take a hike?</span> - Join the Leeds Group Ramblers and get involved in a regular programme of walks and hikes in and around your area.</h1>
+  <h1><span>Take a hike?</span> Join the Leeds Group Ramblers and get involved in a regular programme of walks and hikes in and around your area.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>13</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>Leeds Group Ramblers</dt>
-        <dd>Every Saturday</dd>
+        <dd class="availability">Next walk: Saturday 13 January at 10:30am</dd>
         <dd>No cost - just turn up at the start point</dd>
-        <dd>Here are the details for their next <a href="http://www.ramblers.org.uk/go-walking/find-a-walk-or-route/walk-detail.aspx?walkID=3923908" target="_blank">walk</a></dd>
       </dl>
     </header>
     <div class="location-details">
       <%= map(latitude: 53.790771, longitude: -1.5563977) %>
       <dl>
-        <dd>This is a 30 minutes car journey from you. If this is too far, visit <a href="http://www.leedsramblers.org.uk/" target="_blank">the Leeds Ramblers website</a> for a list of planned future walks which may have closer start points.</dd>
-        <dd class="availability">Next walk: Saturday 13 January at 10:30am, Scholes &amp; Barnbow</dd>
+        <dd>Meet at the Maypole on Main Street Barwick in Elmet</dd>
+        <dd>30 minutes car journey <a href="https://www.google.co.uk/maps/dir//53.790771,-1.5563977/@53.7907174,-1.5560245,16z/data=!4m2!4m1!3e0" target="_blank">Get directions</a> </dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      <a href="http://www.ramblers.org.uk/go-walking/find-a-walk-or-route/walk-detail.aspx?walkID=3923908" target="_blank">ramblers.org.uk/go-walking/find-a-walk-or-route/walk-detail</a>
     </div>
   </section>
 <% end %>
 
 <%= recommendation id: 'learn-social-media', why: 'You said you’d like to learn how to use social media' do %>
-  <h1><span>How about learning to use Social Media?</span>There are free IT learning sessions taking place at Horsforth Community Hub that could help.</h1>
+  <h1><span>How about learning to use social media?</span>There are free IT learning sessions taking place at Horsforth Community Hub that could help.</h1>
   <section class="recommendation-details">
     <header>
       <dl>
         <dt>Horsforth Community Hub</dt>
-        <dd>Open every day</dd>
+        <dd class="availability">Open every day</dd>
         <dd>No cost</dd>
-        <dd>For further details: phone 0113 378 1872</dd>
       </dl>
     </header>
     <div class="location-details">
       <%= map(latitude: 53.8399165, longitude: -1.6399358) %>
       <dl>
+        <dd>Town Street, Horsforth, Leeds​, LS18 5BL</dd>
         <dd>3 minutes walk</dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      Phone <a href="tel:01133781872" target="_blank">0113 378 1872</a>
     </div>
   </section>
 <% end %>
@@ -68,19 +96,28 @@
   <h1><span>Do you want to meet other people in Horsforth?</span> How about joining the Horsforth Ladies meetup. They’re all about making new friends and having good conversation.</h1>
   <section class="recommendation-details">
     <header>
+      <div class="date">
+        <span>17</span>
+        <span>Jan</span>
+      </div>
       <dl>
         <dt>Horsforth Ladies</dt>
-        <dd>Adhoc but usually two or three times a month</dd>
+        <dd class="availability">Next meetup: Wednesday 17 January 7pm</dd>
         <dd>No cost (other than any food or drink you choose to buy)</dd>
-        <dd>Sign up on their <a href="https://www.meetup.com/Horsforth-ladies-Meetup" target="_blank">meetup page</a></dd>
       </dl>
     </header>
     <div class="location-details">
       <%= map(latitude: 53.841500, longitude: -1.635772) %>
       <dl>
-        <dd>5 minutes walk to their next meetup</dd>
-        <dd class="availability">Next meetup: Wednesday 17 January at Bar 166 in Horsforth at 7pm</dd>
+        <dd>Bar 166, 166 Town Street, Horsforth, Leeds</dd>
+        <dd>5 minutes walk</dd>
       </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Request to join their group</h2>
+      <a href="https://www.meetup.com/horsforth-ladies-meetup" target="_blank">meetup.com/horsforth-ladies-meetup</a>
     </div>
   </section>
 <% end %>
