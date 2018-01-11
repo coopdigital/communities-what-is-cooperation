@@ -1,7 +1,14 @@
-<article class="recommendation" id="<%=id%>">
-  <%= content %>
-  <footer>
-    <p><%= why %></p>
-    <a href="#">This isn’t for me</a>
-  </footer>
+<article class="recommendation" data-recommendation-id="<%=id%>">
+  <div class="front">
+    <%= content %>
+    <footer>
+      <p><%= why %></p>
+      <a class="not_for_me" href="#">This isn’t for me</a>
+    </footer>
+  </div>
+  <div class="back">
+    <h1>
+      <span>OK, noted!</span> Your feedback is useful for when I’m finding things for you to do.
+    </h1>
+  </div>
 </article>
