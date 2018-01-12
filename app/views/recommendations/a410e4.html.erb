@@ -1,3 +1,40 @@
 <%= intro my_name: 'Gavin', avatar: 'gavin.png' do %>
   <p>Hi Christina, I’ve found some things for you to do in LS16. Take a look and let me know how you get on!</p>
 <% end %>
+
+<%= recommendation id: 'leeds-tool-library', why: 'You said you’d like to share your tools' do %>
+    <h1><span>Interested in sharing your tools?</span> What tools do you have to share specifically? You may be interested in contacting the Leeds Tool Library as they a trying to build up a resource of tools.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Hyde Park Source</dt>
+        <dd class="availability">Open: Tuesday - Friday: 9am - 5pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8071291, longitude: -1.5670411) %>
+      <dl>
+        <dd>Hyde Park Source, 2 Rosebank Road, Leeds, LS3 1HH</dd>
+        <dd>35 minutes by bus <a href="https://www.google.co.uk/maps/dir//Hyde+Park+Source,+Rosebank+Road,+Leeds/@53.8071056,-1.6348917,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48795eae1c0faf4f:0xe2c5c160ed476ccc!2m2!1d-1.5648524!2d53.807126" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Read more about the tool library</h2>
+      <a href="http://www.hydeparksource.org/leeds-tool-libary.html" target="_blank">hydeparksource.org</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'others-want-to-share-tools', why: 'You said you’d like to borrow some tools' do %>
+  <h1><span>Someone nearby wants to share their tools</span></h1>
+  <div class="other-people">
+    <img src="<%= image_path 'anonymous.svg' %>" alt=""><br /><br />
+  </div>
+  <section class="start-something-detail">
+    <p>This person lives about a 45 minute walk from you but if you were to meet in the middle then this would fit in with your 20 minutes walk distance which you stated. Do you want me to introduce you?</p>
+    <%= interest_button "Yes, introduce me" %>
+    <p class="helper-text">(Only your first name and email address will be shared)</p>
+  </section>
+<% end %>
