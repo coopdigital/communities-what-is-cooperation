@@ -38,3 +38,28 @@
     <p class="helper-text">(Only your first name and email address will be shared)</p>
   </section>
 <% end %>
+
+<%= recommendation id: 'west-yorkshire-playhouse', why: 'You said you’d like to go to a show' do %>
+    <h1><span>There are plenty of shows which are taking place in the comings days</span> at venues in the city centre such as The Lion, The Witch &amp; The Wardrobe. Unfortunately I was unable to find any shows that were within a 20 minute walk from your location.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'west-yorkshire-playhouse.png' %>" alt="">
+      <dl>
+        <dt>West Yorkshire Playhouse</dt>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.7980412, longitude: -1.5365653) %>
+      <dl>
+        <dd>Playhouse Square, Quarry Hill, Leeds LS2 7UP</dd>
+        <dd>About 40 minutes by public transport <a href="https://www.google.co.uk/maps/dir//West+Yorkshire+Playhouse,+Playhouse+Square,+Quarry+Hill,+Leeds/@53.7980208,-1.6044159,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795c16cbb4b68f:0xd6ea21dab9c96c81!2m2!1d-1.5343766!2d53.7980412!3e3" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Take a look at upcoming shows</h2>
+      <a href="https://www.wyp.org.uk/about/whats-on" target="_blank">wyp.org.uk/about/whats-on</a>
+    </div>
+  </section>
+<% end %>
