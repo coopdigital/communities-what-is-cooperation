@@ -89,3 +89,29 @@
     </div>
   </section>
 <% end %>
+
+<%= recommendation id: 'village-gym', why: 'You said you’d like to go to an exercise class and stay healthy' do %>
+    <h1><span>It’s January so it’s the time to start a new fitness routine.</span> There’s a gym based in Weetwood has over 90 classes per week across three studios, including pilates, yoga and Les Mills classes. There’s a group fitness class for everyone!</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'village-gym.png' %>" alt="">
+      <dl>
+        <dt>Village Gym Leeds North</dt>
+        <dd>Class times vary, check their <a href="https://www.villagegym.co.uk/media/1997/village-gym-leeds-north-group-fitness.pdf" target="_blank">timetable [PDF]</a></dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.831839, longitude: -1.6432467) %>
+      <dl>
+        <dd>186 Otley Road, Leeds, LS16 5PR</dd>
+        <dd>30 minute walk <a href="https://www.google.co.uk/maps/dir//Village+Hotel+Leeds+North,+186+Otley+Rd,+Headingly,+Leeds+LS16+5PR/@53.8341746,-1.6597953,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x487959170b24dbbd:0xf7d7911c75845ff6!2m2!1d-1.589756!2d53.834195!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more about the gym</h2>
+      <a href="https://www.villagegym.co.uk/locations/leeds-north/" target="_blank">villagegym.co.uk/locations/leeds-north/</a>
+    </div>
+  </section>
+<% end %>
