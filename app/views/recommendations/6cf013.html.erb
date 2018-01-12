@@ -1,0 +1,121 @@
+<%= intro my_name: 'Gavin', avatar: 'gavin.png' do %>
+  <p>Hi Sonya, I’ve found some things for you to do in LS6. Take a look and let me know how you get on!</p>
+<% end %>
+<%= recommendation id: 'learn-crypto', why: 'You said you’d like to learn about cryptocurrencies' do %>
+    <h1><span>Interested to learn more about cryptocurrencies?</span> I was unable to find anything within your stated travel distance but I did find a meetup that you might want to take a look at.</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>18</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Leeds Bitcoin Crypto Meetup</dt>
+        <dd class="availability">Next meetup: Thursday 18 January 6:30pm</dd>
+        <dd>No cost</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.7966436, longitude: -1.536034) %>
+      <dl>
+        <dd>ODI Leeds, Munro House, Duke Street, Leeds</dd>
+        <dd>25 minutes by public transport <a href="https://www.google.co.uk/maps/dir//ODI+Leeds,+Duke+Street,+Leeds/@53.796562,-1.6739269,11z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795c16c39f7001:0x782b8aae4e273fd7!2m2!1d-1.5338453!2d53.7966436!3e3's+Playing+Field,+Brownberrie+Lane,+Horsforth,+Leeds+LS18+5SB/@53.8469272,-1.7065858,12z/data=!3m1!4b1!4m2!4m1!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more about this meetup group</h2>
+      <a href="https://www.meetup.com/Leeds-Bitcoin-Crypto-Meetup" target="_blank">meetup.com/leeds-bitcoin-crypto-meetup</a>
+    </div>
+    <div class="action">
+      <h2>Let them know you’ll be going</h2>
+      <a href="https://www.meetup.com/Leeds-Bitcoin-Crypto-Meetup/events/243487364/" target="_blank">meetup.com/leeds-bitcoin-crypto-meetup/events/243487364</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'food-around-world', why: 'You said you’d like to experience food from around the world' do %>
+  <h1><span>Want to experience food from around the world?</span> If you are willing to travel into the city centre then the World Feast at Kirkgate Market is event inspired by street food from around the world.</h1>
+  <p class="expanded-intro">Running the 4th Sunday of the month from 10am to 4pm, each event will feature a great range of traders offering delicious treats to satisfy your taste buds.</p>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>28</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>World Feast at Kirkgate Market</dt>
+        <dd class="availability">Next meetup: Sunday 28 January</dd>
+        <dd>No cost</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.7986235, longitude: -1.5414524) %>
+      <dl>
+        <dd>Vicar Lane, Leeds City Centre LS2 7HY</dd>
+        <dd>25 minutes by public transport <a href="https://www.google.co.uk/maps/dir//Kirkgate+Market,+Leeds/@53.7986235,-1.5414524,17z/data=!4m17!1m7!3m6!1s0x48795c1a10de9137:0xa59fcb6d75348135!2sKirkgate+Market,+Leeds!3b1!8m2!3d53.7986235!4d-1.5392637!4m8!1m0!1m5!1m1!1s0x48795c1a10de9137:0xa59fcb6d75348135!2m2!1d-1.5392637!2d53.7986235!3e3" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      <a href="http://www.leeds.gov.uk/leedsmarkets/Pages/world-feast.aspx" target="_blank">leeds.gov.uk/leedsmarkets/pages/world-feast</a>
+    </div>
+  </section>
+  </br>
+  <p>If you are looking to go somewhere local then you could visit the <a href="http://headingleyfarmersmarket.com/" target="_blank">Headingley Farmers Market</a> which is only a 6 minute walk away.</p>
+<% end %>
+<%= recommendation id: 'walk-a-neighbours-dog', why: 'You said you’d like to walk a neighbour’s dog' do %>
+  <h1><span>Want to take a neighbour’s dog for a walk?</span> Borrow My Doggy is a website where people with dogs get matched with people who can help walk them!</h1>
+  <p class="expanded-intro">I’ve had a look, there are plenty of dogs on there near where you live. You’ll have to register on their website to see what’s available and to start getting matched with a dog. You can do this for free with basic membership and upgrade if you find dogs that you want to walk.</p>
+  <header>
+    <dl>
+      <dd>£12.99 per year for full membership</dd>
+    </dl>
+  </header>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Register</h2>
+      <a href="https://www.borrowmydoggy.com/" target="_blank">borrowmydoggy.com</a>
+      </dl>
+    </header>
+  </section>
+<% end %>
+<%= recommendation id: 'teach-new-skill', why: 'You said you’d like to teach people a new skill' do %>
+  <h1><span>Looking to to teach people a new skill?</span> It all depends on what skills you have which you want to teach to people.</h1>
+  <p class="expanded-intro">You may want to consider contacting you local community centre such as the Headingley Enterprise &amp; Arts Centre (HEART). They offer a wide variety of activities and courses at the centre and you may be able to help here by supporting an already established session or even set up your own.</p>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'heart.png' %>" alt="Co-op">
+      <dl>
+        <dt>Headingley Enterprise & Arts Centre (HEART)</dt>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8202422, longitude: -1.5801801) %>
+      <dl>
+        <dd>Bennett Road, Leeds LS6 3HN</dd>
+        <dd>10 minutes walk <a href="https://www.google.co.uk/maps/dir//Headingley+Enterprise+%26+Arts+Centre,+Bennett+Road,+Leeds+LS6+3HN/@53.8201606,-1.718073,11z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4879593627596e3d:0xbad898f862526c30!2m2!1d-1.5779914!2d53.8202422!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Contact</h2>
+      Phone <a href="tel:01132754548" target="_blank" target="_blank">0113 2754548</a>
+      </dl>
+    </header>
+  </section>
+<% end %>
+<%= recommendation id: 'share-a-chicken', why: 'You said you’d like to share a chicken' do %>
+  <h1><span>Want to share a chicken?</span> Whilst I can’t see how you can do this locally at the moment, if you are concerned with the welfare of ex-battery chickens you may want to consider adopting a chicken instead. There are a number of organisation across the UK that do this.</h1>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Read this ‘Adopt a chicken’ article</h2>
+      <a href="http://www.countryliving.co.uk/news/news/a122/adopt-a-chicken/" target="_blank">countryliving.co.uk/adopt-a-chicken</a>
+      </dl>
+    </header>
+  </section>
+<% end %>
