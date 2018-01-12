@@ -1,0 +1,102 @@
+<%= intro my_name: 'Gavin', avatar: 'gavin.png' do %>
+  <p>Hi Tony, I’ve found some things for you to do in LS6.  Take a look and let me know how you get on!</p>
+<% end %>
+
+<%= recommendation id: 'leeds-tool-library', why: 'You said you’d like to borrow some tools' do %>
+    <h1><span>Interested in borrowing some tools?</span> What tools do you need to borrow specifically? Is it for a particular job or are you just looking to borrow certain tools for certain jobs at certain times? You may be interested in visiting the Leeds Tool Library.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Hyde Park Source</dt>
+        <dd class="availability">Open: Tuesday - Friday: 9am - 5pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8071291, longitude: -1.5670411) %>
+      <dl>
+        <dd>Hyde Park Source, 2 Rosebank Road, Leeds, LS3 1HH</dd>
+        <dd>36 minute walk <a href="https://www.google.co.uk/maps/dir//Hyde+Park+Source,+2+Rosebank+Rd,+Leeds+LS3+1HH/@53.8056703,-1.5766524,14z/data=!4m9!4m8!1m0!1m5!1m1!1s0x48795eae1c0faf4f:0xe2c5c160ed476ccc!2m2!1d-1.5648524!2d53.807126!3e0" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Read more about the tool library</h2>
+      <a href="http://www.hydeparksource.org/leeds-tool-libary.html" target="_blank">hydeparksource.org</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'borrowing-tools-from-others', why: 'You said you’d like to borrow some tools' do %>
+  <h1><span>Someone nearby wants to share their tools</span></h1>
+  <div class="other-people">
+    <img src="<%= image_path 'anonymous.svg' %>" alt=""><br /><br />
+  </div>
+  <section class="start-something-detail">
+    <p>They live about a 45 minute walk from you but if you were to meet in the middle then this would fit in with your 20 minutes walk distance. Do you want me to introduce you?</p>
+    <%= interest_button "Yes, introduce me" %>
+    <p class="helper-text">(Only your first name and email address will be shared)</p>
+  </section>
+<% end %>
+
+<%= recommendation id: 'go-singing-headingley', why: 'You said you’d like to sing' do %>
+  <h1><span>What to go singing?</span> Headingley Voices are a friendly community choir singing a wide range of music. All welcome and there are no auditions so no pressure!</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>18</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Headingley Voices</dt>
+        <dd class="availability">Next get together: Thursday 18th, 7:40 - 9:30pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.8222019, longitude: -1.5762082) %>
+      </div>
+      <dl>
+        <dt>Shire Oak Primary School, Wood Lane, Headingley, Leeds LS6 2DT</dt>
+        <dd>7 minute walk <a target="_blank" href="https://www.google.co.uk/maps/dir//Shire+Oak+CE+Primary+School,+Wood+Lane,+Headingley,+Leeds+LS6+2DT/@53.8221784,-1.6440591,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795948dd02e87f:0x5b68562f6787606f!2m2!1d-1.5740195!2d53.8221988!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        Email <a target="_blank" href="mailto:percysmithjanie@gmail.com" target="_blank">percysmithjanie@gmail.com</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'learn-guitar-headingly-arts', why: 'You said you’d like to learn to play a musical instrument' do %>
+  <h1><span>Fancy learning to play the guitar?</span> 🎸 First Pick Guitar Tuition based at the Headingley Enterprise &amp; Arts Centre offers relaxed and friendly 1-1 tuition.</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>15</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>First Pick Guitar Tuition</dt>
+        <dd class="availability">Next session: Monday 15th, 6pm - 9:30pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.8202453, longitude: -1.5801801) %>
+      </div>
+      <dl>
+        <dt>Headingley Enterprise &amp; Arts Centre, Bennett Road, Leeds LS6 3HN</dt>
+        <dd>8 minute walk <a target="_blank" href="https://www.google.co.uk/maps/dir//Headingley+Enterprise+%26+Arts+Centre,+Bennett+Road,+Leeds+LS6+3HN/@53.8198184,-1.592462,14z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4879593627596e3d:0xbad898f862526c30!2m2!1d-1.5779914!2d53.8202422!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more and look at different sessions</h2>
+        <a target="_blank" href="https://www.heartcentre.org.uk/events/category/groups-and-classes/?tribe_events_cat=groups-and-classes&tribe-bar-search=guitar" target="_blank">heartcentre.org.uk</a>
+      </div>
+    </section>
+  </section>
+<% end %>
