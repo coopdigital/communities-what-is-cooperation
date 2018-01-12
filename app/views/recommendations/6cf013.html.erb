@@ -1,3 +1,36 @@
 <%= intro my_name: 'Gavin', avatar: 'gavin.png' do %>
   <p>Hi Sonya, I’ve found some things for you to do in LS6. Take a look and let me know how you get on!</p>
 <% end %>
+<%= recommendation id: 'learn-crypto', why: 'You said you’d like to learn about cryptocurrencies' do %>
+    <h1><span>Interested to learn more about cryptocurrencies?</span> I was unable to find anything within your stated travel distance but I did find a meetup that you might want to take a look at.</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>18</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Leeds Bitcoin Crypto Meetup</dt>
+        <dd class="availability">Next meetup: Thursday 18 January 6:30pm</dd>
+        <dd>No cost</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.7966436, longitude: -1.536034) %>
+      <dl>
+        <dd>ODI Leeds, Munro House, Duke Street, Leeds</dd>
+        <dd>25 minutes by public transport <a href="https://www.google.co.uk/maps/dir//ODI+Leeds,+Duke+Street,+Leeds/@53.796562,-1.6739269,11z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48795c16c39f7001:0x782b8aae4e273fd7!2m2!1d-1.5338453!2d53.7966436!3e3's+Playing+Field,+Brownberrie+Lane,+Horsforth,+Leeds+LS18+5SB/@53.8469272,-1.7065858,12z/data=!3m1!4b1!4m2!4m1!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more about this meetup group</h2>
+      <a href="https://www.meetup.com/Leeds-Bitcoin-Crypto-Meetup" target="_blank">meetup.com/leeds-bitcoin-crypto-meetup</a>
+    </div>
+    <div class="action">
+      <h2>Let them know you’ll be going</h2>
+      <a href="https://www.meetup.com/Leeds-Bitcoin-Crypto-Meetup/events/243487364/" target="_blank">meetup.com/leeds-bitcoin-crypto-meetup/events/243487364</a>
+    </div>
+  </section>
+<% end %>
