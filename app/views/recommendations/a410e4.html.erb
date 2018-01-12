@@ -63,3 +63,29 @@
     </div>
   </section>
 <% end %>
+
+<%= recommendation id: 'meanwood-valley-trail', why: 'You said you’d like to go for a walk' do %>
+    <h1><span>How about a local walk on the Meanwood Valley Trail.</span> Although the trail starts in the city centre you could start your walk in Meanwood Park and follow Route 2.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'mvt.png' %>" alt="">
+      <dl>
+        <dt>Meanwood Park</dt>
+        <dd>Open: 8am - 4pm every day</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.831839, longitude: -1.6432467) %>
+      <dl>
+        <dd>8 Tannery Square, Leeds LS6 4LT</dd>
+        <dd>28 minute walk <a href="https://www.google.co.uk/maps/dir//Meanwood+Park,+8+Tannery+Square,+Leeds+LS6+4LT/@53.831839,-1.6432465,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x487959417d0d3b5f:0x43ab358a34cabf16!2m2!1d-1.5732072!2d53.8318594!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Get details of the route</h2>
+      <a href="http://www.leeds.gov.uk/docs/MVT%20leaflet%20for%20web.pdf" target="_blank">Meanwood Valley Trail [PDF]</a>
+    </div>
+  </section>
+<% end %>
