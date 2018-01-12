@@ -75,11 +75,36 @@
       <dd>£12.99 per year for full membership</dd>
     </dl>
   </header>
-
   <section class="call-to-action">
     <div class="action">
       <h2>Register</h2>
       <a href="https://www.borrowmydoggy.com/" target="_blank">borrowmydoggy.com</a>
+      </dl>
+    </header>
+  </section>
+<% end %>
+<%= recommendation id: 'teach-new-skill', why: 'You said you’d like to teach people a new skill' do %>
+  <h1><span>Looking to to teach people a new skill?</span> It all depends on what skills you have which you want to teach to people.</h1>
+  <p class="expanded-intro">You may want to consider contacting you local community centre such as the Headingley Enterprise & Arts Centre (HEART). They offer a wide variety of activities and courses at the centre and you may be able to help here by supporting an already established session or even set up your own.</p>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'heart.png' %>" alt="Co-op">
+      <dl>
+        <dt>Headingley Enterprise & Arts Centre (HEART)</dt>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8202422, longitude: -1.5801801) %>
+      <dl>
+        <dd>Bennett Road, Leeds LS6 3HN</dd>
+        <dd>10 minutes walk <a href="https://www.google.co.uk/maps/dir//Headingley+Enterprise+%26+Arts+Centre,+Bennett+Road,+Leeds+LS6+3HN/@53.8201606,-1.718073,11z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4879593627596e3d:0xbad898f862526c30!2m2!1d-1.5779914!2d53.8202422!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Contact</h2>
+      Phone <a href="tel:01132754548" target="_blank" target="_blank">0113 2754548</a>
       </dl>
     </header>
   </section>
