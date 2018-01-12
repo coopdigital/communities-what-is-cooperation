@@ -1,0 +1,67 @@
+<%= intro my_name: 'Gavin', avatar: 'gavin.png' do %>
+  <p>Hi Katy, I’ve found some things for you to do in LS6. Take a look and let me know how you get on!</p>
+<% end %>
+
+<%= recommendation id: 'street-party-outdoor-cinema', why: 'You said you’d like to organise a street party' do %>
+    <h1><span>Have a street party or organise an outdoor cinema night.</span> You may want to talk with friends or neighbours about a theme for the street party or cinema night. You might find that people on your street have useful contacts, skills or abilities to help make the organising and enjoyment of the day go really well.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'leeds-city-council.png' %>" alt="">
+      <dl>
+        <dt>Gary Pritchard</dt>
+        <dd>Senior Highways Engineer</dd>
+        <dd><a href="tel:0113 3787506" target="_blank">0113 3787506</a></dd>
+      </dl>
+    </header>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        <a href="http://www.leeds.gov.uk/Business/Pages/Street-Parties.aspx" target="_blank">leeds.gov.uk/Business/Pages/Street-Parties</a>
+      </div>
+    </section>
+<% end %>
+
+<%= recommendation id: 'host-birthday-party', why: 'You said you’d like to host a birthday party' do %>
+  <h1><span>Why not host a birthday party</span> by hiring out the community centre in Meanwood?</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Meanwood Community Centre</dt>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8269925, longitude: -1.5655732) %>
+      <dl>
+        <dd>7 minute walk <a href="https://www.google.co.uk/maps/dir//Meanwood+Community+Centre,+Stainbeck+Ave,+Leeds+LS7+2QU/@53.826969,-1.6334238,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x4879595b3e9f2035:0xac8bb77d884e58a0!2m2!1d-1.5633845!2d53.8269894!3e2" target="_blank">Get directions</a> </dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Find out more</h2>
+      <a href="https://www.facebook.com/pages/Meanwood-Community-Centre/1759354170947562" target="_blank">facebook.com/pages/meanwood-community-centre</a>
+    </div>
+    <div class="action">
+      <h2>Enquire about a booking</h2>
+      Phone <a href="tel:01132741622" target="_blank">0113 274 1622</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'start-seed-library', why: 'You said you’d like to start a seed library' do %>
+  <h1><span>Hoping to share bee friendly plant cuttings?</span> How about setting up a plant cuttings circle with other bee friendly people in LS18. There aren’t any groups in your area at the moment how would you feel setting one up yourself?</h1>
+  <section class="recommendation-details">
+    <ol>
+      <li><a href="http://beefriendly.ca/25-plants-for-bees-in-your-garden/" target="_blank">Find out which of your plants are bee friendly</a></li>
+      <li>Find a group of friends or neighbours who like gardening and have bee friendly plant, four other people would be a good number to start with</li>
+      <li>Agree which plants each of you will make cuttings of</li>
+      <li>Get together and swap your cuttings ready for the following year’s planting (maybe over a nice cup of tea)</li>
+    </ol>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Tips on how to take cuttings</h2>
+      <a href="http://www.gardenersworld.com/how-to/grow-plants/how-to-take-cuttings-from-house-plants/" target="_blank">gardenersworld.com/how-to/grow-plants/how-to-take-cuttings-from-house-plants</a>
+    </div>
+  </section>
+<% end %>
