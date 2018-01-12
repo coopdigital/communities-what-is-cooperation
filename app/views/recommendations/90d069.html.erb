@@ -1,0 +1,101 @@
+<%= intro my_name: 'Ian', avatar: 'ian.png' do %>
+  <p>Hi Jean, I’ve had a go at finding some things for you to do near LS25. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
+<% end %>
+
+<%= recommendation id: 'walk-a-neighbours-dog', why: 'You said you’d like to walk a neighbour’s dog' do %>
+  <h1><span>Do you want to find a neighbour’s dog to walk?</span> Borrow My Doggy is a website where people with dogs get matched with people who can help walk them!</h1>
+  <p class="expanded-intro">You’ll have to register on their website to see what’s available and to start getting matched with a dog. You can do this for free with basic membership and upgrade if you find dogs that you want to walk. 🐶</p>
+  <header>
+    <dl>
+      <dd>£12.99 per year for full membership</dd>
+    </dl>
+  </header>
+
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Register</h2>
+      <a href="https://www.borrowmydoggy.com/" target="_blank">borrowmydoggy.com</a>
+      </dl>
+    </header>
+  </section>
+<% end %>
+
+<%= recommendation id: 'cook-thai-food', why: 'You said you’d like to learn to cook new things' do %>
+  <h1><span>How about learning to cook thai food?</span> Leeds Cookery School has lots of different classes coming up, this one will teach you to make green thai fish curry with sticky rice. Yum! It is a bit further away than you wanted to travel, I hope that’s okay.
+  </h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>25</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Leeds Cookery School</dd>
+        <dd>£45</dd>
+        <dd class="availability">Next session: Thursday 25 January, 2:30pm - 4:30pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.802676, longitude: -1.494038) %>
+      <dl>
+        <dd>Leeds Cookery School, The Old Fire Station, Gipton Approach, Leeds, LS9 6NL</dd>
+        <dd>40 minutes by bus from you <a href="https://www.google.co.uk/maps/dir/''/''/@53.8027106,-1.5641761,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48795c88bc531a05:0x8935a240f24e6bcf!2m2!1d-1.4941366!2d53.802731" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Book here</h2>
+        <a target="_blank" href="https://www.leedscookeryschool.org.uk/classes/a-taste-of-thai-7/">leedscookeryschool.org.uk</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'leeds-repair-cafe', why: 'You said you’d like to learn to repair your clothes' do %>
+  <h1><span>Don’t replace - repair!</span> Get your broken stuff mended and learn how to repair things yourself at a Repair Cafe. You can join the Facebook group to find out when the next cafe is, or get help starting your own event. They happen all over Leeds so you may have to travel - I’ve attended one of these events and they are really fun, and you’d be amazed what can be saved from the dump.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'leeds-repair-cafe.png' %>" alt="">
+      <dl>
+        <dt>Leeds Repair Cafe</dt>
+        <dd>No cost</dd>
+      </dl>
+    </header>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Join their Facebook group for updates</h2>
+      <a href="https://www.facebook.com/groups/252645815067316/" target="_blank">facebook.com/groups/252645815067316</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'east-leeds-music-centre', why: 'You said you’d like to learn to play a musical instrument' do %>
+  <h1><span>Discover your passion for music.</span> I found a music school fairly close to you (a bit further than you said you’d like to travel, is that OK?). They offer teaching for a range of instruments in individual classes and group sessions for all abilities.</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>20</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>East Leeds Music Centre</dt>
+        <dd class="availability">Next class: Saturday 20 January</dd>
+        <dd>£12.50 a month</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.815396, longitude: -1.434790) %>
+      <dl>
+        <dd>John Smeaton Academy, Smeaton Approach, Barwick Road, Manston, Leeds, LS15 8TA</dd>
+        <dd>30 minutes by bus and walking <a href="https://www.google.co.uk/maps/dir//John+Smeaton+Academy,+Smeaton+Approach,+Barwick+Rd,+Leeds+LS15+8TA/@53.8152983,-1.504758,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x487943578dca29e5:0x4d8bd3e09a500668!2m2!1d-1.4347189!2d53.8153187!3e2" target="_blank">Get directions</a> </dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Choose a class and sign up</h2>
+      <a href="http://artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/east-leeds-music-centre/" target="_blank">artformsleeds.co.uk/music/citywide-and-community-music-making/music-centres/east-leeds-music-centre/</a>
+    </div>
+  </section>
+<% end %>
