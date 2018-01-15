@@ -87,7 +87,8 @@ label[for='submission_involvement'],
 label[for='suggestion'],
 label[for='name'],
 label[for='email'],
-label[for='postcode'], {
+label[for='postcode'],
+label[for='reason'] {
   @media (max-width: 720px) {
     font-size: 1.2rem;
   }
@@ -275,6 +276,9 @@ body.recommendations-page {
 
   .back {
     display: none;
+    .not_for_me_feedback, .feedback_thanks{
+      display: none;
+    }
   }
 
   section {

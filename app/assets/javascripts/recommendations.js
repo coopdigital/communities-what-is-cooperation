@@ -18,12 +18,15 @@ $(document).ready(function(){
     }
   }
 
-  function switchToBackContent(event){
+  function switchToBackContent(event, show_feedback){
     var link = $(event.target);
     var recommendation = link.parents('article.recommendation').first();
 
     recommendation.find(".front").hide();
     recommendation.find(".back").show();
+    if(show_feedback === true){
+      recommendation.find(".not_for_me_feedback").show();
+    }
     recommendation.addClass('item-highlight');
   }
 
@@ -33,8 +36,17 @@ $(document).ready(function(){
 
   $('.recommendations-page a.not_for_me').click(function(event){
     logClickEvent(event, 'not_for_me');
-    switchToBackContent(event);
+    switchToBackContent(event, true);
     return(false);
+  });
+
+  $('.recommendations-page form.not_for_me_feedback').submit(function(event){
+    event.preventDefault();
+    var form = $(this);
+    logClickEvent(event, 'not_for_me_feedback', form.find('textarea[name=reason]').val());
+    form.find('.feedback_thanks').show();
+    form.find('fieldset').hide();
+    return false;
   });
 
   $('.recommendations-page a.interest').click(function(event){
