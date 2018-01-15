@@ -1,0 +1,107 @@
+<%= intro my_name: 'Sophy', avatar: 'sophy.png' do %>
+  <p>Hi Marie, Sophy here. I've looked for some opportunities for you to practice your French - see what you think.</p>
+<% end %>
+
+<%= recommendation id: 'leeds-french', why: 'You said you’d like to learn another language' do %>
+  <h1><span>French chat over drinks</span> - I found a conversation group that meets up to speak French in a bar near Leeds station. </h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>20</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Conversation meetup</dt>
+        <dd>70p contribution</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.7953047, longitude: -1.5456611) %>
+      <dl>
+        <dd>Meet at The Waiting Room, 11 Mill Hill, Leeds LS1 5DQ</dd>
+        <dd>43 minutes by bus from home <a href="https://www.google.com/maps/dir//11+Mill+Hill,+Leeds+LS1/@53.7953047,-1.5456611,17z/data=!4m17!1m7!3m6!1s0x48795c1edab23df5:0x6a7263ba3850b90f!2s11+Mill+Hill,+Leeds+LS1!3b1!8m2!3d53.7953047!4d-1.5456611!4m8!1m0!1m5!1m1!1s0x48795c1edab23df5:0x6a7263ba3850b90f!2m2!1d-1.5456611!2d53.7953047!3e1" target="_blank">Get directions</a></dd>
+        <dd class="availability">Next meetup: Saturday 20 January 7-10pm</dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Join up on Meetup</h2>
+        <a href="https://www.meetup.com/leedsfrenchmeetup/events/246235390/" target="_blank">www.meetup.com/leedsfrenchmeetup</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'leeds-exchange', why: 'You said you’d like to learn another language' do %>
+  <h1><span>Be a student and a teacher</span> - there's a language exchange group with lots of languages available. The group seems like a nice way to help people with their English as well as getting the chance to improve your French - could be worth a go.</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>18</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Leeds International Language Exchange</dt>
+        <dd>£1 contribution</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8001256, longitude: -1.5397721) %>
+      <dl>
+        <dd>Meet at Santiago Bar, 1-3 Grand Arcade, City Centre, Leeds LS1 6PG</dd>
+        <dd>40 minutes by bus from home <a href="https://www.google.com/maps/dir//Santiago+Bar,+1-3+Grand+Arcade,+City+Centre,+Leeds+LS1+6PG/@53.8001256,-1.5397721,17z/data=!4m16!1m6!3m5!1s0x48795c1a5f6f5b21:0x429de8d0bd6e977!2sSantiago+Bar!8m2!3d53.8001094!4d-1.5397992!4m8!1m0!1m5!1m1!1s0x48795c1a5f6f5b21:0x429de8d0bd6e977!2m2!1d-1.5397992!2d53.8001094!3e3" target="_blank">Get directions</a></dd>
+        <dd class="availability">Next meetup: Thursday 18 January 7-10pm</dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Join up on Meetup</h2>
+        <a href="https://www.meetup.com/leedsfrenchmeetup/events/246235390/" target="_blank">www.meetup.com/leedsfrenchmeetup</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'italki-mehdi', why: 'You said you’d like to learn another language' do %>
+  <h1><span>Have a chat with Mehdi</span> - I found someone who's up for a language exchange with someone who can help him improve his English. Mehdi is a native French speaker and based in Leeds.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'mehdi.jpeg' %>" alt="">
+      <dl>
+        <dt>Medhi, Leeds</dt>
+        <dd>Contact him on <a target="_blank" href="https://www.italki.com/user/1839404">www.italki.com</a></dd>
+        <dd class="note">(Note: You’ll need to register first)</dd>
+      </dl>
+    </header>
+  </section>
+<% end %>
+
+
+<%= recommendation id: 'leeds-exchange', why: 'You said you’d like to learn another language' do %>
+  <h1><span>This is a bit of a stretch</span> - I did find a language class a bit closer to home - but it's Spanish, not French... Thorner Victory Hall has a weekly Spanish class - no information about costs but there is a contact email you could try.</h1>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>23</span>
+        <span>Jan</span>
+      </div>
+      <dl>
+        <dt>Spanish classes</dt>
+        <dd>Contact Nieves Espinosa for the cost</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.8601785, longitude: -1.4319101) %>
+      <dl>
+        <dd>Thorner Victory Hall, Carr Lane, Thorner, Leeds, LS14 3EY</dd>
+        <dd>37 minutes by bus from home (8 minutes by car) <a href="https://www.google.co.uk/maps/dir//Thorner+Victory+Hall,+Carr+Ln,+Thorner,+Leeds+LS14+3EY/@53.8601785,-1.4319101,17z/data=!4m16!1m6!3m5!1s0x48794520eb4455f5:0x3133165a07bf40d6!2sThorner+Victory+Hall!8m2!3d53.8601257!4d-1.4285747!4m8!1m0!1m5!1m1!1s0x48794520eb4455f5:0x3133165a07bf40d6!2m2!1d-1.4285745!2d53.8601258!3e3?dcr=0" target="_blank">Get directions</a></dd>
+        <dd class="availability">Next class: Tuesday 23 January 7-10pm</dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Contact Nieves Espinosa: nievesf@gmail.com</h2>
+      </div>
+    </section>
+  </section>
+<% end %>
