@@ -275,6 +275,9 @@ body.recommendations-page {
 
   .back {
     display: none;
+    .not_for_me_feedback, .feedback_thanks{
+      display: none;
+    }
   }
 
   section {
