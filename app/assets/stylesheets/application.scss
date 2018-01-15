@@ -485,6 +485,7 @@ body.recommendations-page {
       border-left: 0.4rem solid $coop-grey;
       div.action {
         margin-bottom: 1rem;
+        overflow-wrap: break-word;
         h2 {
           margin: 0;
         }
