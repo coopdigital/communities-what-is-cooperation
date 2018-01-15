@@ -1,0 +1,104 @@
+<%= intro my_name: 'James', avatar: 'james-r.png' do %>
+  <p>Hi Janet. I’ve had a go at finding some things for you to do near WF3. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
+<% end %>
+
+<%= recommendation id: 'learn-italian-with-ilva', why: 'You said you’d like to learn Italian' do %>
+  <h1><span>Learn Italian with Ilva.</span> She’ll teach you in exchange for helping her with English. Fantastico! 🇮🇹</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'iiva.png' %>" alt="">
+      <dl>
+        <dt>Ilva</dt>
+        <dd>Available to meet in Leeds</dd>
+      </dl>
+    </header>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Contact Iiva on Language Exchange</h2>
+        <a href="https://mylanguageexchange.com/MemberInfo.asp?uid=3449315" target="_blank">mylanguageexchange.com</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'grow-garden-appltree', why: 'You said you’d like to grow a garden and plant a communal herb garden' do %>
+  <h1><span>Grow a garden at Appletree,</span> an outdoor community resource, where people of all ages and from all walks of life get together to grow.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'appletree.png' %>" alt="">
+      <dl>
+        <dt>Appletree Allotment and Community Garden</dt>
+        <dd class="availability">Next open: Tomorrow 10am - 4pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.695692, longitude: -1.520273) %>
+      </div>
+      <dl>
+        <dt>Off Agbrigg Road, Wakefild, WF1 5AE (opposite Mr Happy)</dt>
+        <dd>Around 12 minute drive <a target="_blank" href="https://www.google.com/maps/dir//41+Agbrigg+Rd,+Wakefield+WF1,+UK/@53.6640623,-1.5520518,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4879665d0b6a8c71:0x47c4718207df3c77!2m2!1d-1.4820125!2d53.6640827!3e0?hl=en-GB" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        <a target="_blank" href="http://www.wakefield.gov.uk/sport-and-leisure/wakefield-wellbeing/appletree" target="_blank">wakefield.gov.uk</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+
+<%= recommendation id: 'borrowing-tools-from-others', why: 'You said you’d like to grow a garden' do %>
+  <h1><span>Someone nearby wants to grow a garden.</span> You’re not alone!</h1>
+  <div class="other-people">
+    <img src="<%= image_path 'anonymous.svg' %>" alt=""><br /><br />
+  </div>
+  <section class="start-something-detail">
+    <p>They live about a 15 minute drive from you. Do you want me to introduce you?</p>
+    <%= interest_button "Yes, introduce me" %>
+    <p class="helper-text">(Only your first name and email address will be shared)</p>
+  </section>
+<% end %>
+
+<%= recommendation id: 'bonus-suggestion-meet-food-italian', why: 'You said you’d like to meet new people and enjoy food together and learn Italian' do %>
+  <h1><span class="bonus">Bonus suggestion:</span> I have found an Italian cooking course where you’ll get chance to meet new people and learn some new dishes.</h1>
+  <p class="expanded-intro">
+    It’s an extra <span class="info-warning">5 minutes further away than you said you’d be happy to drive</span>, but if you’re into all things Italian then this could be one not to miss!
+  </p>
+  <section class="recommendation-details">
+    <header>
+      <div class="date">
+        <span>6</span>
+        <span>Jun</span>
+      </div>
+      <dl>
+        <dt>Italian Kitchen cooking course</dt>
+        <dd class="availab  ility">Start date: Wednesday 6:30pm - 8:30</dd>
+        <dd>Cost: £150 for 4 evening classes</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.695692, longitude: -1.520273) %>
+      <dl>
+        <dt>Gate 3, 43a Springfield Centre, Bagley lane, Farsley, Leeds</dt>
+        <dd><span class="info-warning">32 minutes</span> <a target="_blank" href="https://www.google.co.uk/maps/dir//Get+Cooking,+Cookery+School,+43a+Springfield+Commercial+Centre,+Bagley+Lane,+Farsley,+Leeds+LS28+5LY/@53.8171953,-1.7348138,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x487be203fb953a11:0x42fe38b083d20ff5!2m2!1d-1.6647745!2d53.8172157!3e0">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        <a href="https://get-cooking.org.uk/portfolio/italian-kitchen/" target="_blank">get-cooking.org.uk/portfolio/italian-kitchen</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'start-singing-group', why: "You said you'd like to sing", back_content: "Thanks for letting me know, I'll be in touch." do %>
+  <h1><span>🎉 Want something a bit more challenging?</span> You said you would like to sing, but I can’t find a group near where you live. Would you like to start one?</h1>
+  <section class="recommendation-details">
+    <%= want_to_start %>
+  </section>
+  <p class="expanded-intro">I can see if I can find other people in your neighbourhood who also wants to sing.</p>
+<% end %>
