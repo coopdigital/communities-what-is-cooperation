@@ -113,11 +113,12 @@
   </section>
 <% end %>
 
-<%= recommendation id: 'bonus-suggestion', why: 'You said you’d like to visit new places and enjoy food' do %>
+<%= recommendation id: 'bonus-suggestion', why: 'You said you enjoy food and would like to visit new places' do %>
   <h1><span class="bonus">Bonus suggestion:</span> Incredible Edible Wakefield have created a map of hundreds of wild food locations around the Wakefield area.</h1>
   <p class="expanded-intro">
     Do you fancy going foraging for wild fruit and nuts? I could look to see if there's anyone else in your area who’d like to go with you.
   </p>
+  <%= interest_button "I'm interested in this" %>
   <section class="call-to-action">
     <div class="action">
       <h2>View the map</h2>
