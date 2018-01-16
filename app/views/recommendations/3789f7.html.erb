@@ -1,0 +1,99 @@
+<%= intro my_name: 'Helen', avatar: 'helen.png' do %>
+  <p>Hi Jodie, I’ve had a go at finding some things for you to do near LS11. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
+<% end %>
+
+<%= recommendation id: 'beeston-craft-cafe', why: 'You said you’d like to make handmade gifts' do %>
+  <h1><span>Could a craft cafe help you make handmade gifts?</span> There’s a craft cafe that takes place in Beeston during term time every Wednesday morning. They share crafts and ideas while relaxing over a cuppa and cake so it might be a good place to try some new crafts and make lovely gifts for people.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Beeston Craft Cafe</dt>
+        <dd>Every Wednesday during term time from 10am to 2pm</dd>
+        <dd>No cost</dd>
+        <dd class="availability">Next session: Wednesday 17 January at 10am</dd>
+      </dl>
+
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.782096, longitude: -1.547146) %>
+      </div>
+      <dl>
+        <dt>Church Of The Nazarene, Hunslet Hall Rd, Leeds LS11 6TT</dt>
+        <dd>37 minutes walk <a target="_blank" href="https://www.google.co.uk/maps/dir//Church+Of+The+Nazarene,+Hunslet+Hall+Road,+Leeds/@53.7721926,-1.5673377,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x48795c262ad70ec3:0x99598db17ab1985!2m2!1d-1.5481426!2d53.7820225!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more or contact them on their </h2>
+        <a href="https://www.facebook.com/craftcafebeeston/" target="_blank">Facebook page</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'learn-chinese-with-fan', why: 'You said you’d like to learn a new language and to cook new things' do %>
+  <h1><span>Would you like to learn chinese and how to cook chinese food with Fan?</span> He is a student at the University and will teach you in exchange for helping him with his english.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Fan</dt>
+        <dd>Available to meet in Leeds</dd>
+      </dl>
+    </header>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Contact Fan on Language Exchange</h2>
+        <a href="https://mylanguageexchange.com/MemberInfo.asp?uid=3763492" target="_blank">mylanguageexchange.com</a>
+        <dd class="note">(Note: You’ll need to register first)</dd>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'cottingley-community-orchard', why: 'You said you’d like to make cider' do %>
+  <h1><span>How about getting involved with a community orchard so you can make cider in the Autumn?</span> Cider making tends to happen in October and last year there were <a target="_blank" href="https://www.theorchardproject.org.uk/news/leedsappleday2017/" target="_blank">lots of opportunities</a> to get involved in Leeds.  Cottingley Orchards is the closest place to you. They held a fun apple day last year and there’s a tree planting coming up in February organised by Cottingley in Bloom if you want get involved now in preparation for cider season 🍏🍺</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Cottingley Community Orchard</dt>
+        <dd>No cost</dd>
+        <dd class="availability">Next event: 20 February at 10am planting twenty more apple trees in the orchard</dd>
+      </dl>
+
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.769166, longitude: -1.582092) %>
+      </div>
+      <dl>
+        <dt>Meet at The Heights, Cottingley</dt>
+        <dd>20 minutes walk <a target="_blank" href="https://www.google.co.uk/maps/dir//53.769166,-1.582092/@53.7659781,-1.5797918,16z/data=!4m2!4m1!3e2" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more or contact them on their </h2>
+        <a href="https://www.facebook.com/groups/419769031403382/about/" target="_blank">Facebook page</a>
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'leeds-community-energy-coop', why: 'You said you’d like to put up a wind turbine' do %>
+  <h1><span>Do you want to join Leeds Community Energy co-operative?</span> They are on a mission to develop community-owned renewable energy generation projects in Leeds to create a fair and clean, sustainable environment for future generations. Would you like to get involved? They meet fortnightly and are currently looking for volunteers.</h1>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Leeds Community Energy co-operative</dt>
+        <dd>Meet fortnightly</dd>
+      </dl>
+    </header>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Contact them via </h2>
+        <a href="http://leedscommunityenergy.org.uk/" target="_blank">leedscommunityenergy.org.uk</a>
+      </div>
+    </section>
+  </section>
+<% end %>
