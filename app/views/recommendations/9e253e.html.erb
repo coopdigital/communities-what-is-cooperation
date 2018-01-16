@@ -1,0 +1,128 @@
+<%= intro my_name: 'Helen', avatar: 'helen.png' do %>
+  <p>Hi Kathryn, I’ve had a go at finding some things for you to do near WF1. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
+<% end %>
+
+<%= recommendation id: 'hepworth-gallery', why: 'You said you’d like to visit new places' do %>
+    <h1><span>Have you been to The Hepworth in Wakefield?</span> According to Stephen Deuchar “It’s the museum everyone would dream of having on their doorstep.”</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'hepworth.png' %>" alt="">
+      <dl>
+        <dt>The Hepworth Wakefield</dt>
+        <dd class="availability">Open: 10am - 5pm every day</dd>
+        <dd>Free entry</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.6760087, longitude: -1.4934895) %>
+      <dl>
+        <dd>Gallery Walk, Wakefield WF1 5AW</dd>
+        <dd>27 minutes by bus <a href="https://www.google.co.uk/maps/dir//The+Hepworth+Wakefield,+Gallery+Walk,+Wakefield+WF1+5AW/@53.6759883,-1.5613401,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48796657b3fd3437:0x26241f5938bf1cd7!2m2!1d-1.4913008!2d53.6760087!3e3" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>See what’s on</h2>
+      <a href="https://hepworthwakefield.org/whats-on/" target="_blank">hepworthwakefield.org/whats-on/</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'walk-a-neighbours-dog', why: 'You said you’d like to walk a neighbour’s dog' do %>
+  <h1><span>Do you want to find a neighbour’s dog to walk?</span> Borrow My Doggy is a website where people with dogs get matched with people who can help walk them!</h1>
+  <p class="expanded-intro">You’ll have to register on their website to see what’s available and to start getting matched with a dog. You can do this for free with basic membership and upgrade if you find dogs that you want to walk</p>
+  <section class="recommendation-details">
+    <header>
+      <dl>
+        <dt>Borrow my doggy</dt>
+        <dd>£12.99 per year for full membership</dd>
+      </dl>
+    </header>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>Register on</h2>
+      <a href="https://www.borrowmydoggy.com/" target="_blank">Borrow My Doggy</a>
+    </div>
+  </section>
+<% end %>
+
+<%= recommendation id: 'grow-garden-appltree', why: 'You said you’d like to grow a garden' do %>
+  <h1><span>Grow a garden at Appletree,</span> an outdoor community resource, where people of all ages and from all walks of life get together to grow.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'appletree.png' %>" alt="">
+      <dl>
+        <dt>Appletree Allotment and Community Garden</dt>
+        <dd class="availability">Next open: Tomorrow 10am - 4pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.695692, longitude: -1.520273) %>
+      </div>
+      <dl>
+        <dt>Off Agbrigg Road, Wakefield, WF1 5AE (opposite Mr Happy)</dt>
+        <dd>Around 31 minutes by bus <a target="_blank" href="https://www.google.com/maps/dir//41+Agbrigg+Rd,+Wakefield+WF1,+UK/@53.6640623,-1.5520518,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4879665d0b6a8c71:0x47c4718207df3c77!2m2!1d-1.4820125!2d53.6640827!3e0?hl=en-GB" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        <a target="_blank" href="http://www.wakefield.gov.uk/sport-and-leisure/wakefield-wellbeing/appletree" target="_blank">wakefield.gov.uk</a>
+      </div>
+    </section>
+  </section>
+  <div class="other-people">
+    <img src="<%= image_path 'anonymous.svg' %>" alt="">
+  </div>
+  <section class="start-something-detail">
+    <h2>Connect with people in your neighbourhood</h2>
+    <p>We’re recommending this activity to one other person in your neighbourhood. Would you like me to introduce you to them?</p>
+    <%= interest_button "Yes, introduce me" %>
+    <p class="helper-text">(Only your first name and email address will be shared)</p>
+  </section>
+<% end %>
+
+<%= recommendation id: 'rodillian-runners', why: 'You said you’d like to go for a run' do %>
+  <h1><span>Join some friendly local runners?</span> Rodillian Runners meet weekly to enjoy the social side of running. Joining a club is the perfect way to add some variety to  your training. Their members have a range of abilities but they ask that you can already run a minimum of 3 miles at 12 minute mile pace or faster. Is this a good fit for you?</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'rodillian-runners.png' %>" alt="">
+      <dl>
+        <dt>Rodillian Runners</dt>
+        <dd class="availability">Next run: Tuesday, 23 January at 6:30pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.718259, longitude: -1.479089) %>
+      </div>
+      <dl>
+        <dt>Manley Park, Stanley Rodillians RUFC, Lee Moor Rd, Stanley, Wakefield WF3 4EF</dt>
+        <dd>18 minutes by bus <a target="_blank" href="https://www.google.co.uk/maps/dir//Manley+Park,+Stanley+Rodillians+RUFC,+Lee+Moor+Road,+Stanley,+Wakefield/@53.7140303,-1.4970922,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4879678fce491fe1:0xea1cbdcf81cd71a9!2m2!1d-1.4789352!2d53.7177489!3e3" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Contact them</h2>
+        <a target="_blank" href="https://rodillianrunners.co.uk/contact/" target="_blank">rodillianrunners.co.uk</a> or just turn up at the clubhouse on a Tuesday and ask for Louise
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'bonus-suggestion', why: 'You said you enjoy food and would like to visit new places' do %>
+  <h1><span class="bonus">Bonus suggestion:</span> Incredible Edible Wakefield have created a map of hundreds of wild food locations around the Wakefield area.</h1>
+  <p class="expanded-intro">
+    Do you fancy going foraging for wild fruit and nuts? I could look to see if there’s anyone else in your area who’d like to go with you.
+  </p>
+  <%= interest_button "I'm interested in this" %>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>View the map</h2>
+      <a target="_blank" href="http://www.incredible-edible-wakefield.co.uk/index.php/wild-food-map/" target="_blank">incredible-edible-wakefield.co.uk</a>
+    </div>
+  </section>
+<% end %>
