@@ -84,3 +84,44 @@
     <p class="helper-text">(Only your first name and email address will be shared)</p>
   </section>
 <% end %>
+
+<%= recommendation id: 'rodillian-runners', why: 'You said you’d like to go for a run' do %>
+  <h1><span>Join some friendly local runners?</span> Rodillian Runners meet weekly to enjoy the social side of running. Joining a club is the perfect way to add some variety to  your training. Their members have a range of abilities but the ask that you can already run a minimum of 3 miles at 12 minute mile pace or faster. Is this a good fit for you?</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'rodillian-runners.jpg' %>" alt="">
+      <dl>
+        <dt>Rodillian Runners</dt>
+        <dd class="availability">Next run: Tuesday, 23 January at 6:30pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.718259, longitude: -1.479089) %>
+      </div>
+      <dl>
+        <dt>Manley Park, Stanley Rodillians RUFC, Lee Moor Rd, Stanley, Wakefield WF3 4EF</dt>
+        <dd>18 minutes by bus <a target="_blank" href="https://www.google.co.uk/maps/dir//Manley+Park,+Stanley+Rodillians+RUFC,+Lee+Moor+Road,+Stanley,+Wakefield/@53.7140303,-1.4970922,15z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4879678fce491fe1:0xea1cbdcf81cd71a9!2m2!1d-1.4789352!2d53.7177489!3e3" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Contact them</h2>
+        <a target="_blank" href="https://rodillianrunners.co.uk/contact/" target="_blank">rodillianrunners.co.uk</a> or just turn up at the clubhouse on a Tuesday and ask for Louise
+      </div>
+    </section>
+  </section>
+<% end %>
+
+<%= recommendation id: 'bonus-suggestion', why: 'You said you’d like to visit new places and enjoy food' do %>
+  <h1><span class="bonus">Bonus suggestion:</span> Incredible Edible Wakefield have created a map of hundreds of wild food locations around the Wakefield area.</h1>
+  <p class="expanded-intro">
+    Do you fancy going foraging for wild fruit and nuts? I could look to see if there's anyone else in your area who’d like to go with you.
+  </p>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>View the map</h2>
+      <a target="_blank" href="http://www.incredible-edible-wakefield.co.uk/index.php/wild-food-map/" target="_blank">incredible-edible-wakefield.co.uk</a>
+    </div>
+  </section>
+<% end %>
