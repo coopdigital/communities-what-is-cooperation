@@ -1,3 +1,30 @@
 <%= intro my_name: 'Helen', avatar: 'helen.png' do %>
   <p>Hi Kathryn, I’ve had a go at finding some things for you to do near WF1. I’m interested to see what you think of my suggestions. If I’ve got something wrong or you want me to find something else then let me know. I hope these ideas help you get more out of your area.</p>
 <% end %>
+
+<%= recommendation id: 'hepworth-gallery', why: 'You said you’d like to visit new places' do %>
+    <h1><span>Have you been to The Hepworth in Wakefield?</span> According to Stephen Deuchar “It’s the museum everyone would dream of having on their doorstep.”</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'hepworth.png' %>" alt="">
+      <dl>
+        <dt>The Hepworth Wakefield</dt>
+        <dd class="availability">Open: 10am - 5pm every day</dd>
+        <dd>Free entry</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <%= map(latitude: 53.6760087, longitude: -1.4934895) %>
+      <dl>
+        <dd>Gallery Walk, Wakefield WF1 5AW</dd>
+        <dd>27 minutes by bus <a href="https://www.google.co.uk/maps/dir//The+Hepworth+Wakefield,+Gallery+Walk,+Wakefield+WF1+5AW/@53.6759883,-1.5613401,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x48796657b3fd3437:0x26241f5938bf1cd7!2m2!1d-1.4913008!2d53.6760087!3e3" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+  </section>
+  <section class="call-to-action">
+    <div class="action">
+      <h2>See what’s on</h2>
+      <a href="https://hepworthwakefield.org/whats-on/" target="_blank">hepworthwakefield.org/whats-on/</a>
+    </div>
+  </section>
+<% end %>
