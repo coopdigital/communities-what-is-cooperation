@@ -47,3 +47,40 @@
     </div>
   </section>
 <% end %>
+
+<%= recommendation id: 'grow-garden-appltree', why: 'You said you’d like to grow a garden and plant a communal herb garden' do %>
+  <h1><span>Grow a garden at Appletree,</span> an outdoor community resource, where people of all ages and from all walks of life get together to grow.</h1>
+  <section class="recommendation-details">
+    <header>
+      <img src="<%= image_path 'appletree.png' %>" alt="">
+      <dl>
+        <dt>Appletree Allotment and Community Garden</dt>
+        <dd class="availability">Next open: Tomorrow 10am - 4pm</dd>
+      </dl>
+    </header>
+    <div class="location-details">
+      <div class="map">
+        <%= map(latitude: 53.695692, longitude: -1.520273) %>
+      </div>
+      <dl>
+        <dt>Off Agbrigg Road, Wakefild, WF1 5AE (opposite Mr Happy)</dt>
+        <dd>Around 12 minute drive <a target="_blank" href="https://www.google.com/maps/dir//41+Agbrigg+Rd,+Wakefield+WF1,+UK/@53.6640623,-1.5520518,12z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4879665d0b6a8c71:0x47c4718207df3c77!2m2!1d-1.4820125!2d53.6640827!3e0?hl=en-GB" target="_blank">Get directions</a></dd>
+      </dl>
+    </div>
+    <section class="call-to-action">
+      <div class="action">
+        <h2>Find out more</h2>
+        <a target="_blank" href="http://www.wakefield.gov.uk/sport-and-leisure/wakefield-wellbeing/appletree" target="_blank">wakefield.gov.uk</a>
+      </div>
+    </section>
+  </section>
+  <div class="other-people">
+    <img src="<%= image_path 'anonymous.svg' %>" alt="">
+  </div>
+  <section class="start-something-detail">
+    <h2>Connect with people in your neighbourhood</h2>
+    <p>We’re recommending this activity to one other person in your neighbourhood. Would you like me to introduce you to them?</p>
+    <%= interest_button "Yes, introduce me" %>
+    <p class="helper-text">(Only your first name and email address will be shared)</p>
+  </section>
+<% end %>
