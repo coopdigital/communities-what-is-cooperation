@@ -29,4 +29,14 @@
 
 <hr />
 
+<h2>Collected activity suggestions</h2>
+
+<ul>
+  <% @activity_suggestions.each do |suggestion| %>
+    <li><%=suggestion%></li>
+  <% end %>
+</ul>
+
+<hr />
+
 <%= render 'admin/members/list', members: @members %>
