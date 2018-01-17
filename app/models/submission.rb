@@ -1,6 +1,7 @@
 class Submission < ApplicationRecord
   belongs_to :member
   has_many :interests
+  has_many :yes_activities, -> { where("interests.response" => 'yes')}, through: :interests, :source => :activity
 
   scope :by_created, ->{ order('created_at ASC')}
   scope :finished, ->{ where(finished: true) }

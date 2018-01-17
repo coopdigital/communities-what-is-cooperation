@@ -1,68 +1,32 @@
-<%= render 'shared/google_maps' %>
+<h2>Activities</h2>
 
-<h1>Final participants</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <% @submissions.each do |submission | %>
+        <th><%= submission.member.name %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.name %></td>
+        <% @submissions.each do |submission| %>
 
+            <% if submission.yes_activities.include?(activity) %>
+            <td style="background-color: #91d8b4;"></td>
+            <% else %>
+            <td style="background-color: #d86363;"></td>
+            <% end %>
 
-<% if flash[:member_uuid] %>
-  <hr />
-  <p class="message message-success">Participant created. Remember to copy the details below back into the spreadsheet.</p>
-  <ul>
-    <li><strong>ID:</strong> <%= flash[:member_uuid] %></li>
-    <li><strong>Link:</strong> <%= link_to member_url(flash[:member_uuid]), member_path(flash[:member_uuid]) %></li>
-  </ul>
-<% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <hr />
 
 <%= render 'admin/members/list', members: @members %>
-
-<h2>Member map</h2>
-<div id="admin-map" style="width: 100%; height: 500px;">
-</div>
-
-<hr />
-
-<h2>Collected involvement repsonses</h2>
-
-<ul>
-  <% @involvement_responses.each do |involvement| %>
-    <li><%=involvement%></li>
-  <% end %>
-</ul>
-
-<h2>Collected activity suggestions</h2>
-
-<ul>
-  <% @activity_suggestions.each do |suggestion| %>
-    <li><%=suggestion%></li>
-  <% end %>
-</ul>
-
-<hr />
-
-<h2>Activities</h2>
-
-<h3>👍</h3>
-<ul>
-  <% @interests.each do |activity, count| %>
-    <li><%=link_to activity.name, admin_activity_path(activity) %> (<%=count%>)</li>
-  <% end %>
-</ul>
-<h3>👎</h3>
-<ul>
-  <% @disinterests.each do |activity, count| %>
-    <li><%=activity.name%> (<%=count%>)</li>
-  <% end %>
-</ul>
-
-<hr />
-<%= link_to 'All participants', admin_archived_members_path %>
-<hr />
-<h2>Create a new participant</h2>
-<p class="message message-info">Enter the participant's postcode below and a unique ID and link will be created:</p>
-<%= form_tag admin_members_path, method: :post do %>
-  <%= label_tag :postcode %>
-  <%= text_field_tag :postcode, params[:postcode], required: true %>
-  <%= submit_tag 'Create participant', class: 'btn btn-primary'%>
-<% end %>
-<hr />

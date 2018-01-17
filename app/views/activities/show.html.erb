@@ -1,6 +1,6 @@
 <%= form_for @submission, url: submission_activities_path(@submission), method: :put do |f| %>
-  <h1>What sort of things would you like to do?</h1>
-  <p class="begin-statement">I would like to...</p>
+  <h1>Is this cooperating?</h1>
+  <p class="begin-statement">If two neighbours came together to...</p>
   <%= f.fields_for :interests, @interests do |interest_fields| %>
     <fieldset class="thumbs-up-down">
       <%= interest_fields.hidden_field :position %>
@@ -10,11 +10,10 @@
           <%= interest_fields.object.activity.name %>
         </p>
       </div>
-      <p class="end-statement">... with people in my neighbourhood</p>
       <div class="thumbs-up-down-choice">
-        <%= interest_fields.label :response_yes, '👍' %>
+        <%= interest_fields.label :response_yes, 'Yes!' %>
         <%= interest_fields.radio_button :response, 'yes' %>
-        <%= interest_fields.label :response_no, '👎' %>
+        <%= interest_fields.label :response_no, 'No' %>
         <%= interest_fields.radio_button :response, 'no' %>
         <%= interest_fields.radio_button :response, 'unseen' %>
       </div>

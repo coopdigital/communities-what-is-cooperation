@@ -4,7 +4,11 @@ module Admin
   class MembersController < AdminController
 
     def index
-      @members = Member.with_final_submission.order('created_at ASC')
+      @members = Member.order('created_at ASC')
+
+      @submissions = Submission.final
+      @activities = Activity.active
+
       @involvement_responses = Submission.final.where.not(involvement: "").pluck(:involvement).uniq
       @activity_suggestions = Submission.final.where.not(activity_suggestion: "").pluck(:activity_suggestion).uniq
       @interests = Activity.joins(interests: :submission).where('interests.response' => 'yes', 'submissions.final' => true).map do |activity|
